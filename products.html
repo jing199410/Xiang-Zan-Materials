@@ -55,7 +55,27 @@
       margin: 0 5px;
       padding: 0.3em 0.8em;
     }
-  </style>
+  
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -81,7 +101,17 @@
       </ul>
     </aside>
     <div class="product-area">
-      <div class="search-box">
+      
+    <div class="search-box">
+      <label for="sortSelect">排序方式：</label>
+      <select id="sortSelect" onchange="sortProducts()">
+        <option value="default">預設排序</option>
+        <option value="low">價格由低到高</option>
+        <option value="high">價格由高到低</option>
+      </select>
+    </div>
+    <div class="search-box">
+    
         <input type="text" id="searchInput" placeholder="搜尋商品名稱..." oninput="searchProducts()" />
       </div>
       <div id="product-grid" class="product-grid"></div>
@@ -95,7 +125,7 @@
     const allProducts = [{"商品編號":"P001","商品名稱":"矽利康防水膠","分類":"建材","價格":144,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P002","商品名稱":"矽利康防水膠","分類":"建材","價格":95,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P003","商品名稱":"紅磚 10塊裝","分類":"建材","價格":102,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P004","商品名稱":"矽利康防水膠","分類":"建材","價格":126,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P005","商品名稱":"矽利康防水膠","分類":"建材","價格":106,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P006","商品名稱":"台泥水泥 50kg","分類":"建材","價格":215,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P007","商品名稱":"矽利康防水膠","分類":"建材","價格":95,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P008","商品名稱":"紅磚 10塊裝","分類":"建材","價格":84,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P009","商品名稱":"PVC 水管 1吋","分類":"建材","價格":48,"圖片":"https:\/\/via.placeholder.com\/300x200?text=PVC+水管+1吋"},{"商品編號":"P010","商品名稱":"中空磚","分類":"建材","價格":23,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P011","商品名稱":"石膏板 120x240cm","分類":"建材","價格":283,"圖片":"https:\/\/via.placeholder.com\/300x200?text=石膏板+120x240cm"},{"商品編號":"P012","商品名稱":"紅磚 10塊裝","分類":"建材","價格":94,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P013","商品名稱":"台泥水泥 50kg","分類":"建材","價格":163,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P014","商品名稱":"PVC 水管 1吋","分類":"建材","價格":46,"圖片":"https:\/\/via.placeholder.com\/300x200?text=PVC+水管+1吋"},{"商品編號":"P015","商品名稱":"紅磚 10塊裝","分類":"建材","價格":88,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P016","商品名稱":"矽利康防水膠","分類":"建材","價格":105,"圖片":"https:\/\/via.placeholder.com\/300x200?text=矽利康防水膠"},{"商品編號":"P017","商品名稱":"石膏板 120x240cm","分類":"建材","價格":283,"圖片":"https:\/\/via.placeholder.com\/300x200?text=石膏板+120x240cm"},{"商品編號":"P018","商品名稱":"紅磚 10塊裝","分類":"建材","價格":113,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P019","商品名稱":"中空磚","分類":"建材","價格":33,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P020","商品名稱":"中空磚","分類":"建材","價格":33,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P021","商品名稱":"紅磚 10塊裝","分類":"建材","價格":113,"圖片":"https:\/\/via.placeholder.com\/300x200?text=紅磚+10塊裝"},{"商品編號":"P022","商品名稱":"中空磚","分類":"建材","價格":22,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P023","商品名稱":"中空磚","分類":"建材","價格":35,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P024","商品名稱":"石膏板 120x240cm","分類":"建材","價格":298,"圖片":"https:\/\/via.placeholder.com\/300x200?text=石膏板+120x240cm"},{"商品編號":"P025","商品名稱":"台泥水泥 50kg","分類":"建材","價格":192,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P026","商品名稱":"台泥水泥 50kg","分類":"建材","價格":182,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P027","商品名稱":"台泥水泥 50kg","分類":"建材","價格":173,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P028","商品名稱":"台泥水泥 50kg","分類":"建材","價格":164,"圖片":"https:\/\/via.placeholder.com\/300x200?text=台泥水泥+50kg"},{"商品編號":"P029","商品名稱":"石膏板 120x240cm","分類":"建材","價格":274,"圖片":"https:\/\/via.placeholder.com\/300x200?text=石膏板+120x240cm"},{"商品編號":"P030","商品名稱":"中空磚","分類":"建材","價格":22,"圖片":"https:\/\/via.placeholder.com\/300x200?text=中空磚"},{"商品編號":"P031","商品名稱":"90度彎頭接頭","分類":"五金","價格":56,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P032","商品名稱":"90度彎頭接頭","分類":"五金","價格":39,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P033","商品名稱":"90度彎頭接頭","分類":"五金","價格":40,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P034","商品名稱":"浴室水龍頭","分類":"五金","價格":746,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P035","商品名稱":"鋅合金門鎖","分類":"五金","價格":302,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋅合金門鎖"},{"商品編號":"P036","商品名稱":"90度彎頭接頭","分類":"五金","價格":39,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P037","商品名稱":"伸縮滑軌 16吋","分類":"五金","價格":160,"圖片":"https:\/\/via.placeholder.com\/300x200?text=伸縮滑軌+16吋"},{"商品編號":"P038","商品名稱":"90度彎頭接頭","分類":"五金","價格":59,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P039","商品名稱":"不鏽鋼門把","分類":"五金","價格":278,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P040","商品名稱":"90度彎頭接頭","分類":"五金","價格":45,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P041","商品名稱":"浴室水龍頭","分類":"五金","價格":677,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P042","商品名稱":"自攻螺絲 100入","分類":"五金","價格":97,"圖片":"https:\/\/via.placeholder.com\/300x200?text=自攻螺絲+100入"},{"商品編號":"P043","商品名稱":"伸縮滑軌 16吋","分類":"五金","價格":103,"圖片":"https:\/\/via.placeholder.com\/300x200?text=伸縮滑軌+16吋"},{"商品編號":"P044","商品名稱":"不鏽鋼門把","分類":"五金","價格":120,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P045","商品名稱":"90度彎頭接頭","分類":"五金","價格":57,"圖片":"https:\/\/via.placeholder.com\/300x200?text=90度彎頭接頭"},{"商品編號":"P046","商品名稱":"不鏽鋼門把","分類":"五金","價格":188,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P047","商品名稱":"浴室水龍頭","分類":"五金","價格":727,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P048","商品名稱":"自攻螺絲 100入","分類":"五金","價格":118,"圖片":"https:\/\/via.placeholder.com\/300x200?text=自攻螺絲+100入"},{"商品編號":"P049","商品名稱":"不鏽鋼門把","分類":"五金","價格":216,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P050","商品名稱":"不鏽鋼門把","分類":"五金","價格":172,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P051","商品名稱":"浴室水龍頭","分類":"五金","價格":530,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P052","商品名稱":"伸縮滑軌 16吋","分類":"五金","價格":125,"圖片":"https:\/\/via.placeholder.com\/300x200?text=伸縮滑軌+16吋"},{"商品編號":"P053","商品名稱":"鋅合金門鎖","分類":"五金","價格":221,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋅合金門鎖"},{"商品編號":"P054","商品名稱":"浴室水龍頭","分類":"五金","價格":695,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P055","商品名稱":"浴室水龍頭","分類":"五金","價格":533,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P056","商品名稱":"鋅合金門鎖","分類":"五金","價格":314,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋅合金門鎖"},{"商品編號":"P057","商品名稱":"自攻螺絲 100入","分類":"五金","價格":72,"圖片":"https:\/\/via.placeholder.com\/300x200?text=自攻螺絲+100入"},{"商品編號":"P058","商品名稱":"自攻螺絲 100入","分類":"五金","價格":108,"圖片":"https:\/\/via.placeholder.com\/300x200?text=自攻螺絲+100入"},{"商品編號":"P059","商品名稱":"不鏽鋼門把","分類":"五金","價格":230,"圖片":"https:\/\/via.placeholder.com\/300x200?text=不鏽鋼門把"},{"商品編號":"P060","商品名稱":"浴室水龍頭","分類":"五金","價格":701,"圖片":"https:\/\/via.placeholder.com\/300x200?text=浴室水龍頭"},{"商品編號":"P061","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":684,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P062","商品名稱":"木器漆 1L","分類":"油漆","價格":225,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P063","商品名稱":"防鏽漆 1L","分類":"油漆","價格":320,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P064","商品名稱":"木器漆 1L","分類":"油漆","價格":194,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P065","商品名稱":"木器漆 1L","分類":"油漆","價格":214,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P066","商品名稱":"室內乳膠漆 5L","分類":"油漆","價格":435,"圖片":"https:\/\/via.placeholder.com\/300x200?text=室內乳膠漆+5L"},{"商品編號":"P067","商品名稱":"防鏽漆 1L","分類":"油漆","價格":303,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P068","商品名稱":"木器漆 1L","分類":"油漆","價格":275,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P069","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":658,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P070","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":574,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P071","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":554,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P072","商品名稱":"防鏽漆 1L","分類":"油漆","價格":253,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P073","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":627,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P074","商品名稱":"木器漆 1L","分類":"油漆","價格":184,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P075","商品名稱":"木器漆 1L","分類":"油漆","價格":226,"圖片":"https:\/\/via.placeholder.com\/300x200?text=木器漆+1L"},{"商品編號":"P076","商品名稱":"防鏽漆 1L","分類":"油漆","價格":262,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P077","商品名稱":"室內乳膠漆 5L","分類":"油漆","價格":439,"圖片":"https:\/\/via.placeholder.com\/300x200?text=室內乳膠漆+5L"},{"商品編號":"P078","商品名稱":"防鏽漆 1L","分類":"油漆","價格":309,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P079","商品名稱":"防鏽漆 1L","分類":"油漆","價格":258,"圖片":"https:\/\/via.placeholder.com\/300x200?text=防鏽漆+1L"},{"商品編號":"P080","商品名稱":"戶外防水漆 5L","分類":"油漆","價格":706,"圖片":"https:\/\/via.placeholder.com\/300x200?text=戶外防水漆+5L"},{"商品編號":"P081","商品名稱":"鋼柄榔頭 16oz","分類":"工具","價格":175,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋼柄榔頭+16oz"},{"商品編號":"P082","商品名稱":"砂輪機 4吋","分類":"工具","價格":923,"圖片":"https:\/\/via.placeholder.com\/300x200?text=砂輪機+4吋"},{"商品編號":"P083","商品名稱":"鋼柄榔頭 16oz","分類":"工具","價格":167,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋼柄榔頭+16oz"},{"商品編號":"P084","商品名稱":"鋁製伸縮梯 4尺","分類":"工具","價格":1987,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋁製伸縮梯+4尺"},{"商品編號":"P085","商品名稱":"電動起子機","分類":"工具","價格":1483,"圖片":"https:\/\/via.placeholder.com\/300x200?text=電動起子機"},{"商品編號":"P086","商品名稱":"砂輪機 4吋","分類":"工具","價格":708,"圖片":"https:\/\/via.placeholder.com\/300x200?text=砂輪機+4吋"},{"商品編號":"P087","商品名稱":"手鋸 木工用","分類":"工具","價格":197,"圖片":"https:\/\/via.placeholder.com\/300x200?text=手鋸+木工用"},{"商品編號":"P088","商品名稱":"砂輪機 4吋","分類":"工具","價格":888,"圖片":"https:\/\/via.placeholder.com\/300x200?text=砂輪機+4吋"},{"商品編號":"P089","商品名稱":"鋼柄榔頭 16oz","分類":"工具","價格":241,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋼柄榔頭+16oz"},{"商品編號":"P090","商品名稱":"電動起子機","分類":"工具","價格":1465,"圖片":"https:\/\/via.placeholder.com\/300x200?text=電動起子機"},{"商品編號":"P091","商品名稱":"電動起子機","分類":"工具","價格":1491,"圖片":"https:\/\/via.placeholder.com\/300x200?text=電動起子機"},{"商品編號":"P092","商品名稱":"數位水平儀","分類":"工具","價格":408,"圖片":"https:\/\/via.placeholder.com\/300x200?text=數位水平儀"},{"商品編號":"P093","商品名稱":"數位水平儀","分類":"工具","價格":667,"圖片":"https:\/\/via.placeholder.com\/300x200?text=數位水平儀"},{"商品編號":"P094","商品名稱":"砂輪機 4吋","分類":"工具","價格":1124,"圖片":"https:\/\/via.placeholder.com\/300x200?text=砂輪機+4吋"},{"商品編號":"P095","商品名稱":"電動起子機","分類":"工具","價格":1213,"圖片":"https:\/\/via.placeholder.com\/300x200?text=電動起子機"},{"商品編號":"P096","商品名稱":"鋁製伸縮梯 4尺","分類":"工具","價格":1819,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋁製伸縮梯+4尺"},{"商品編號":"P097","商品名稱":"電動起子機","分類":"工具","價格":1156,"圖片":"https:\/\/via.placeholder.com\/300x200?text=電動起子機"},{"商品編號":"P098","商品名稱":"鋁製伸縮梯 4尺","分類":"工具","價格":1908,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋁製伸縮梯+4尺"},{"商品編號":"P099","商品名稱":"手鋸 木工用","分類":"工具","價格":178,"圖片":"https:\/\/via.placeholder.com\/300x200?text=手鋸+木工用"},{"商品編號":"P100","商品名稱":"鋁製伸縮梯 4尺","分類":"工具","價格":1926,"圖片":"https:\/\/via.placeholder.com\/300x200?text=鋁製伸縮梯+4尺"}];
     let filtered = allProducts;
     let currentPage = 1;
-    const perPage = 12;
+    const perPage = 10;
 
     function renderProducts() {
       const start = (currentPage - 1) * perPage;
@@ -157,7 +187,20 @@
       alert(name + " 已加入購物車！");
     }
 
+    
+    function sortProducts() {
+      const sortBy = document.getElementById("sortSelect").value;
+      if (sortBy === "low") {
+        filtered.sort((a, b) => a.價格 - b.價格);
+      } else if (sortBy === "high") {
+        filtered.sort((a, b) => b.價格 - a.價格);
+      } else {
+        filtered = [...allProducts]; // 重設排序
+      }
+      renderProducts();
+    }
     // 初始載入
+    
     renderProducts();
   </script>
 </body>
