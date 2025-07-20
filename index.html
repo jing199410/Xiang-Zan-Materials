@@ -10,7 +10,8 @@
 <body>
   <header>
     <h1>祥贊建材批發有限公司</h1>
-    <nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+<nav id="navbar">
       <a href="index.html">首頁</a>
       <a href="products.html">產品介紹</a>
       <a href="cart.html">購物車</a>
@@ -28,5 +29,10 @@
   <footer>
     <p>&copy; 2025 祥贊建材批發有限公司｜統編：83216499</p>
   </footer>
+<script>
+  function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+  }
+</script>
 </body>
 </html>
