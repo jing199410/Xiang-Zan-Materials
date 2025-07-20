@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>結帳 - 祥贊建材</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    form {
+      width: 90%%;
+      max-width: 500px;
+      margin: 2em auto;
+      background: #f1f8e9;
+      padding: 1.5em;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin: 0.5em 0 0.2em;
+    }
+    input, textarea {
+      width: 100%%;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.6em 1.2em;
+      background: #a5d6a7;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .summary {
+      width: 90%%;
+      max-width: 600px;
+      margin: 2em auto;
+    }
+    .summary h3 {
+      text-align: center;
+    }
+    .summary ul {
+      list-style: none;
+      padding: 0;
+    }
+    .summary li {
+      padding: 0.3em 0;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>結帳</h1>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+<nav id="navbar">
+      <a href="index.html">首頁</a>
+      <a href="products.html">產品介紹</a>
+      <a href="cart.html">購物車</a>
+      <a href="checkout.html">結帳</a>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <main>
+    <div class="summary">
+      <h3>訂單摘要</h3>
+      <ul id="order-list"></ul>
+      <p id="order-total">總金額：NT$ 0</p>
+    </div>
+    <form id="checkout-form">
+      <label>姓名</label>
+      <input type="text" required />
+      <label>電話</label>
+      <input type="tel" required />
+      <label>收件地址</label>
+      <textarea rows="3" required></textarea>
+      <label>備註</label>
+      <textarea rows="2"></textarea>
+      <button type="submit">送出訂單</button>
+    </form>
+  </main>
+<a href="cart.html" class="floating-cart">🛒</a>
+
+  <footer>
+    <p>&copy; 2025 祥贊建材批發有限公司</p>
+  </footer>
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    let orderList = document.getElementById("order-list");
+    let total = 0;
+    cart.forEach(item => {
+      let li = document.createElement("li");
+      let subtotal = item.qty * item.price;
+      total += subtotal;
+      li.textContent = `${item.name} x ${item.qty} = NT$ ${subtotal}`;
+      orderList.appendChild(li);
+    });
+    document.getElementById("order-total").textContent = "總金額：NT$ " + total;
+
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("感謝您的訂購！訂單已成功送出。");
+      localStorage.removeItem("cart");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
