@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>購物車 - 祥贊建材</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    table {
+      width: 90%%;
+      margin: 2em auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 0.8em;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    .actions button {
+      padding: 0.3em 0.6em;
+      margin: 0 0.2em;
+    }
+    .total {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>購物車</h1>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="products.html">產品介紹</a>
+      <a href="cart.html">購物車</a>
+      <a href="checkout.html">結帳</a>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>商品名稱</th>
+          <th>單價</th>
+          <th>數量</th>
+          <th>小計</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body"></tbody>
+    </table>
+    <div class="total" id="total">總計：NT$ 0</div>
+    <div style="text-align:center; margin: 2em;">
+      <a href="checkout.html"><button>前往結帳</button></a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 祥贊建材批發有限公司</p>
+  </footer>
+  <script>
+    function renderCart() {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      let tbody = document.getElementById("cart-body");
+      let total = 0;
+      tbody.innerHTML = "";
+      cart.forEach((item, index) => {
+        const subtotal = item.qty * item.price;
+        total += subtotal;
+        tbody.innerHTML += `
+          <tr>
+            <td>${item.name}</td>
+            <td>NT$ ${item.price}</td>
+            <td>${item.qty}</td>
+            <td>NT$ ${subtotal}</td>
+            <td class="actions">
+              <button onclick="changeQty(${index}, 1)">＋</button>
+              <button onclick="changeQty(${index}, -1)">－</button>
+              <button onclick="removeItem(${index})">移除</button>
+            </td>
+          </tr>`;
+      });
+      document.getElementById("total").innerText = "總計：NT$ " + total;
+    }
+
+    function changeQty(index, diff) {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      cart[index].qty += diff;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>

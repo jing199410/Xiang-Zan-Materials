@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>產品介紹 - 祥贊建材</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1em;
+      padding: 1em;
+    }
+    .product-card {
+      border: 1px solid #ccc;
+      padding: 1em;
+      border-radius: 8px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      max-height: 160px;
+      object-fit: contain;
+    }
+    .product-card button {
+      background: #a5d6a7;
+      border: none;
+      padding: 0.5em 1em;
+      margin-top: 0.5em;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>產品介紹</h1>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="products.html">產品介紹</a>
+      <a href="cart.html">購物車</a>
+      <a href="checkout.html">結帳</a>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
+  </header>
+  <main>
+    <section class="product-grid">
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 144</p>
+        <button onclick="addToCart('P001', '矽利康防水膠', 144)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 95</p>
+        <button onclick="addToCart('P002', '矽利康防水膠', 95)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 102</p>
+        <button onclick="addToCart('P003', '紅磚 10塊裝', 102)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 126</p>
+        <button onclick="addToCart('P004', '矽利康防水膠', 126)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 106</p>
+        <button onclick="addToCart('P005', '矽利康防水膠', 106)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 215</p>
+        <button onclick="addToCart('P006', '台泥水泥 50kg', 215)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 95</p>
+        <button onclick="addToCart('P007', '矽利康防水膠', 95)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 84</p>
+        <button onclick="addToCart('P008', '紅磚 10塊裝', 84)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=PVC+水管+1吋" alt="PVC 水管 1吋">
+        <h3>PVC 水管 1吋</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 48</p>
+        <button onclick="addToCart('P009', 'PVC 水管 1吋', 48)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 23</p>
+        <button onclick="addToCart('P010', '中空磚', 23)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=石膏板+120x240cm" alt="石膏板 120x240cm">
+        <h3>石膏板 120x240cm</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 283</p>
+        <button onclick="addToCart('P011', '石膏板 120x240cm', 283)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 94</p>
+        <button onclick="addToCart('P012', '紅磚 10塊裝', 94)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 163</p>
+        <button onclick="addToCart('P013', '台泥水泥 50kg', 163)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=PVC+水管+1吋" alt="PVC 水管 1吋">
+        <h3>PVC 水管 1吋</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 46</p>
+        <button onclick="addToCart('P014', 'PVC 水管 1吋', 46)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 88</p>
+        <button onclick="addToCart('P015', '紅磚 10塊裝', 88)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=矽利康防水膠" alt="矽利康防水膠">
+        <h3>矽利康防水膠</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 105</p>
+        <button onclick="addToCart('P016', '矽利康防水膠', 105)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=石膏板+120x240cm" alt="石膏板 120x240cm">
+        <h3>石膏板 120x240cm</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 283</p>
+        <button onclick="addToCart('P017', '石膏板 120x240cm', 283)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 113</p>
+        <button onclick="addToCart('P018', '紅磚 10塊裝', 113)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 33</p>
+        <button onclick="addToCart('P019', '中空磚', 33)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 33</p>
+        <button onclick="addToCart('P020', '中空磚', 33)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=紅磚+10塊裝" alt="紅磚 10塊裝">
+        <h3>紅磚 10塊裝</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 113</p>
+        <button onclick="addToCart('P021', '紅磚 10塊裝', 113)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 22</p>
+        <button onclick="addToCart('P022', '中空磚', 22)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 35</p>
+        <button onclick="addToCart('P023', '中空磚', 35)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=石膏板+120x240cm" alt="石膏板 120x240cm">
+        <h3>石膏板 120x240cm</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 298</p>
+        <button onclick="addToCart('P024', '石膏板 120x240cm', 298)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 192</p>
+        <button onclick="addToCart('P025', '台泥水泥 50kg', 192)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 182</p>
+        <button onclick="addToCart('P026', '台泥水泥 50kg', 182)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 173</p>
+        <button onclick="addToCart('P027', '台泥水泥 50kg', 173)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=台泥水泥+50kg" alt="台泥水泥 50kg">
+        <h3>台泥水泥 50kg</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 164</p>
+        <button onclick="addToCart('P028', '台泥水泥 50kg', 164)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=石膏板+120x240cm" alt="石膏板 120x240cm">
+        <h3>石膏板 120x240cm</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 274</p>
+        <button onclick="addToCart('P029', '石膏板 120x240cm', 274)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=中空磚" alt="中空磚">
+        <h3>中空磚</h3>
+        <p>分類：建材</p>
+        <p>價格：NT$ 22</p>
+        <button onclick="addToCart('P030', '中空磚', 22)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 56</p>
+        <button onclick="addToCart('P031', '90度彎頭接頭', 56)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 39</p>
+        <button onclick="addToCart('P032', '90度彎頭接頭', 39)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 40</p>
+        <button onclick="addToCart('P033', '90度彎頭接頭', 40)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 746</p>
+        <button onclick="addToCart('P034', '浴室水龍頭', 746)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋅合金門鎖" alt="鋅合金門鎖">
+        <h3>鋅合金門鎖</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 302</p>
+        <button onclick="addToCart('P035', '鋅合金門鎖', 302)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 39</p>
+        <button onclick="addToCart('P036', '90度彎頭接頭', 39)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=伸縮滑軌+16吋" alt="伸縮滑軌 16吋">
+        <h3>伸縮滑軌 16吋</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 160</p>
+        <button onclick="addToCart('P037', '伸縮滑軌 16吋', 160)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 59</p>
+        <button onclick="addToCart('P038', '90度彎頭接頭', 59)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 278</p>
+        <button onclick="addToCart('P039', '不鏽鋼門把', 278)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 45</p>
+        <button onclick="addToCart('P040', '90度彎頭接頭', 45)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 677</p>
+        <button onclick="addToCart('P041', '浴室水龍頭', 677)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=自攻螺絲+100入" alt="自攻螺絲 100入">
+        <h3>自攻螺絲 100入</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 97</p>
+        <button onclick="addToCart('P042', '自攻螺絲 100入', 97)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=伸縮滑軌+16吋" alt="伸縮滑軌 16吋">
+        <h3>伸縮滑軌 16吋</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 103</p>
+        <button onclick="addToCart('P043', '伸縮滑軌 16吋', 103)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 120</p>
+        <button onclick="addToCart('P044', '不鏽鋼門把', 120)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=90度彎頭接頭" alt="90度彎頭接頭">
+        <h3>90度彎頭接頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 57</p>
+        <button onclick="addToCart('P045', '90度彎頭接頭', 57)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 188</p>
+        <button onclick="addToCart('P046', '不鏽鋼門把', 188)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 727</p>
+        <button onclick="addToCart('P047', '浴室水龍頭', 727)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=自攻螺絲+100入" alt="自攻螺絲 100入">
+        <h3>自攻螺絲 100入</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 118</p>
+        <button onclick="addToCart('P048', '自攻螺絲 100入', 118)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 216</p>
+        <button onclick="addToCart('P049', '不鏽鋼門把', 216)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 172</p>
+        <button onclick="addToCart('P050', '不鏽鋼門把', 172)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 530</p>
+        <button onclick="addToCart('P051', '浴室水龍頭', 530)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=伸縮滑軌+16吋" alt="伸縮滑軌 16吋">
+        <h3>伸縮滑軌 16吋</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 125</p>
+        <button onclick="addToCart('P052', '伸縮滑軌 16吋', 125)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋅合金門鎖" alt="鋅合金門鎖">
+        <h3>鋅合金門鎖</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 221</p>
+        <button onclick="addToCart('P053', '鋅合金門鎖', 221)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 695</p>
+        <button onclick="addToCart('P054', '浴室水龍頭', 695)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 533</p>
+        <button onclick="addToCart('P055', '浴室水龍頭', 533)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋅合金門鎖" alt="鋅合金門鎖">
+        <h3>鋅合金門鎖</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 314</p>
+        <button onclick="addToCart('P056', '鋅合金門鎖', 314)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=自攻螺絲+100入" alt="自攻螺絲 100入">
+        <h3>自攻螺絲 100入</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 72</p>
+        <button onclick="addToCart('P057', '自攻螺絲 100入', 72)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=自攻螺絲+100入" alt="自攻螺絲 100入">
+        <h3>自攻螺絲 100入</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 108</p>
+        <button onclick="addToCart('P058', '自攻螺絲 100入', 108)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=不鏽鋼門把" alt="不鏽鋼門把">
+        <h3>不鏽鋼門把</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 230</p>
+        <button onclick="addToCart('P059', '不鏽鋼門把', 230)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=浴室水龍頭" alt="浴室水龍頭">
+        <h3>浴室水龍頭</h3>
+        <p>分類：五金</p>
+        <p>價格：NT$ 701</p>
+        <button onclick="addToCart('P060', '浴室水龍頭', 701)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 684</p>
+        <button onclick="addToCart('P061', '戶外防水漆 5L', 684)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 225</p>
+        <button onclick="addToCart('P062', '木器漆 1L', 225)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 320</p>
+        <button onclick="addToCart('P063', '防鏽漆 1L', 320)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 194</p>
+        <button onclick="addToCart('P064', '木器漆 1L', 194)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 214</p>
+        <button onclick="addToCart('P065', '木器漆 1L', 214)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=室內乳膠漆+5L" alt="室內乳膠漆 5L">
+        <h3>室內乳膠漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 435</p>
+        <button onclick="addToCart('P066', '室內乳膠漆 5L', 435)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 303</p>
+        <button onclick="addToCart('P067', '防鏽漆 1L', 303)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 275</p>
+        <button onclick="addToCart('P068', '木器漆 1L', 275)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 658</p>
+        <button onclick="addToCart('P069', '戶外防水漆 5L', 658)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 574</p>
+        <button onclick="addToCart('P070', '戶外防水漆 5L', 574)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 554</p>
+        <button onclick="addToCart('P071', '戶外防水漆 5L', 554)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 253</p>
+        <button onclick="addToCart('P072', '防鏽漆 1L', 253)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 627</p>
+        <button onclick="addToCart('P073', '戶外防水漆 5L', 627)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 184</p>
+        <button onclick="addToCart('P074', '木器漆 1L', 184)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=木器漆+1L" alt="木器漆 1L">
+        <h3>木器漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 226</p>
+        <button onclick="addToCart('P075', '木器漆 1L', 226)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 262</p>
+        <button onclick="addToCart('P076', '防鏽漆 1L', 262)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=室內乳膠漆+5L" alt="室內乳膠漆 5L">
+        <h3>室內乳膠漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 439</p>
+        <button onclick="addToCart('P077', '室內乳膠漆 5L', 439)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 309</p>
+        <button onclick="addToCart('P078', '防鏽漆 1L', 309)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=防鏽漆+1L" alt="防鏽漆 1L">
+        <h3>防鏽漆 1L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 258</p>
+        <button onclick="addToCart('P079', '防鏽漆 1L', 258)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=戶外防水漆+5L" alt="戶外防水漆 5L">
+        <h3>戶外防水漆 5L</h3>
+        <p>分類：油漆</p>
+        <p>價格：NT$ 706</p>
+        <button onclick="addToCart('P080', '戶外防水漆 5L', 706)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋼柄榔頭+16oz" alt="鋼柄榔頭 16oz">
+        <h3>鋼柄榔頭 16oz</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 175</p>
+        <button onclick="addToCart('P081', '鋼柄榔頭 16oz', 175)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=砂輪機+4吋" alt="砂輪機 4吋">
+        <h3>砂輪機 4吋</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 923</p>
+        <button onclick="addToCart('P082', '砂輪機 4吋', 923)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋼柄榔頭+16oz" alt="鋼柄榔頭 16oz">
+        <h3>鋼柄榔頭 16oz</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 167</p>
+        <button onclick="addToCart('P083', '鋼柄榔頭 16oz', 167)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋁製伸縮梯+4尺" alt="鋁製伸縮梯 4尺">
+        <h3>鋁製伸縮梯 4尺</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1987</p>
+        <button onclick="addToCart('P084', '鋁製伸縮梯 4尺', 1987)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=電動起子機" alt="電動起子機">
+        <h3>電動起子機</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1483</p>
+        <button onclick="addToCart('P085', '電動起子機', 1483)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=砂輪機+4吋" alt="砂輪機 4吋">
+        <h3>砂輪機 4吋</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 708</p>
+        <button onclick="addToCart('P086', '砂輪機 4吋', 708)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=手鋸+木工用" alt="手鋸 木工用">
+        <h3>手鋸 木工用</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 197</p>
+        <button onclick="addToCart('P087', '手鋸 木工用', 197)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=砂輪機+4吋" alt="砂輪機 4吋">
+        <h3>砂輪機 4吋</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 888</p>
+        <button onclick="addToCart('P088', '砂輪機 4吋', 888)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋼柄榔頭+16oz" alt="鋼柄榔頭 16oz">
+        <h3>鋼柄榔頭 16oz</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 241</p>
+        <button onclick="addToCart('P089', '鋼柄榔頭 16oz', 241)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=電動起子機" alt="電動起子機">
+        <h3>電動起子機</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1465</p>
+        <button onclick="addToCart('P090', '電動起子機', 1465)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=電動起子機" alt="電動起子機">
+        <h3>電動起子機</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1491</p>
+        <button onclick="addToCart('P091', '電動起子機', 1491)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=數位水平儀" alt="數位水平儀">
+        <h3>數位水平儀</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 408</p>
+        <button onclick="addToCart('P092', '數位水平儀', 408)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=數位水平儀" alt="數位水平儀">
+        <h3>數位水平儀</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 667</p>
+        <button onclick="addToCart('P093', '數位水平儀', 667)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=砂輪機+4吋" alt="砂輪機 4吋">
+        <h3>砂輪機 4吋</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1124</p>
+        <button onclick="addToCart('P094', '砂輪機 4吋', 1124)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=電動起子機" alt="電動起子機">
+        <h3>電動起子機</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1213</p>
+        <button onclick="addToCart('P095', '電動起子機', 1213)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋁製伸縮梯+4尺" alt="鋁製伸縮梯 4尺">
+        <h3>鋁製伸縮梯 4尺</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1819</p>
+        <button onclick="addToCart('P096', '鋁製伸縮梯 4尺', 1819)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=電動起子機" alt="電動起子機">
+        <h3>電動起子機</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1156</p>
+        <button onclick="addToCart('P097', '電動起子機', 1156)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋁製伸縮梯+4尺" alt="鋁製伸縮梯 4尺">
+        <h3>鋁製伸縮梯 4尺</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1908</p>
+        <button onclick="addToCart('P098', '鋁製伸縮梯 4尺', 1908)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=手鋸+木工用" alt="手鋸 木工用">
+        <h3>手鋸 木工用</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 178</p>
+        <button onclick="addToCart('P099', '手鋸 木工用', 178)">加入購物車</button>
+      </div>
+    
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=鋁製伸縮梯+4尺" alt="鋁製伸縮梯 4尺">
+        <h3>鋁製伸縮梯 4尺</h3>
+        <p>分類：工具</p>
+        <p>價格：NT$ 1926</p>
+        <button onclick="addToCart('P100', '鋁製伸縮梯 4尺', 1926)">加入購物車</button>
+      </div>
+    
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 祥贊建材批發有限公司</p>
+  </footer>
+  <script>
+    function addToCart(id, name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      const index = cart.findIndex(item => item.id === id);
+      if (index > -1) {
+        cart[index].qty += 1;
+      } else {
+        cart.push({ id, name, price, qty: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " 已加入購物車！");
+    }
+  </script>
+</body>
+</html>
