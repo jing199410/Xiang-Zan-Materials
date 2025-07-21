@@ -195,118 +195,118 @@
   ],
   "工具": [
     {
-      "name": "【東工】手動鐵工剪 12吋",
-      "price": 480
+      "name": "【STANLEY】鋁合金水平尺 60cm",
+      "price": 420
     },
     {
-      "name": "【BOSCH】震動電鑽 GSB550",
-      "price": 2900
+      "name": "【BOSCH】電動震動電鑽 GSB13RE",
+      "price": 3200
     },
     {
       "name": "【得力】多功能榔頭 16oz",
       "price": 280
     },
     {
-      "name": "【好工人】電動砂輪機 4吋",
-      "price": 1600
+      "name": "【牧田 Makita】電動砂輪機 GA4030",
+      "price": 1680
     },
     {
-      "name": "【工匠牌】專業工具 01",
-      "price": 600
+      "name": "【HITACHI】電動衝擊起子機 WH18DBDL2",
+      "price": 4800
     },
     {
-      "name": "【工匠牌】專業工具 02",
-      "price": 700
+      "name": "【黑金鋼】迷你焊槍 GS-790",
+      "price": 950
     },
     {
-      "name": "【工匠牌】專業工具 03",
-      "price": 800
+      "name": "【KTC】棘輪扳手組合 12件",
+      "price": 2500
     },
     {
-      "name": "【工匠牌】專業工具 04",
-      "price": 900
+      "name": "【Klein Tools】多功能剝線鉗 11055",
+      "price": 890
     },
     {
-      "name": "【工匠牌】專業工具 05",
-      "price": 1000
+      "name": "【Makita】切斷機 355mm LW1401",
+      "price": 5200
     },
     {
-      "name": "【工匠牌】專業工具 06",
-      "price": 1100
+      "name": "【BOSCH】充電電鑽 GSR180-LI",
+      "price": 4380
     },
     {
-      "name": "【工匠牌】專業工具 07",
-      "price": 1200
+      "name": "【牧田】震動電鑽 HP1630",
+      "price": 2650
     },
     {
-      "name": "【工匠牌】專業工具 08",
-      "price": 1300
+      "name": "【大有】電動刻模機 RT0700C",
+      "price": 2950
     },
     {
-      "name": "【工匠牌】專業工具 09",
-      "price": 1400
+      "name": "【Panasonic】電子捲尺 30m",
+      "price": 680
     },
     {
-      "name": "【工匠牌】專業工具 10",
-      "price": 1500
+      "name": "【DEWALT】木工手鋸 550mm",
+      "price": 750
     }
   ],
   "器材租借": [
+    {
+      "name": "【Kubota】小型履帶式挖土機 KX41-3",
+      "price": 8000
+    },
     {
       "name": "【日立】混凝土攪拌機 220V 500L",
       "price": 5000
     },
     {
-      "name": "【HILTI】雷射水平儀 綠光 360度",
+      "name": "【HILTI】雷射水平儀 PM 2-LG 綠光",
       "price": 800
     },
     {
-      "name": "【山貓】小型挖土機 1噸",
-      "price": 8000
+      "name": "【Yanmar】柴油夯土機 VIO17",
+      "price": 7200
     },
     {
-      "name": "【BOSCH】工業電動破碎機 60J",
-      "price": 3000
-    },
-    {
-      "name": "【工程租借】機具設備編號 001",
-      "price": 3300
-    },
-    {
-      "name": "【工程租借】機具設備編號 002",
+      "name": "【Makita】工業用發電機 EG441A",
       "price": 3600
     },
     {
-      "name": "【工程租借】機具設備編號 003",
-      "price": 3900
+      "name": "【Toku】氣動破碎鎚 TCB-130",
+      "price": 4000
     },
     {
-      "name": "【工程租借】機具設備編號 004",
-      "price": 4200
+      "name": "【Komatsu】油壓剪夾機 PC78US",
+      "price": 9200
     },
     {
-      "name": "【工程租借】機具設備編號 005",
-      "price": 4500
+      "name": "【Sakai】雙鋼輪壓路機 TW500",
+      "price": 8800
     },
     {
-      "name": "【工程租借】機具設備編號 006",
-      "price": 4800
+      "name": "【Bosch】掃描儀 GMS120",
+      "price": 600
     },
     {
-      "name": "【工程租借】機具設備編號 007",
-      "price": 5100
+      "name": "【Mikasa】手扶式壓實機 MVH-308",
+      "price": 6200
     },
     {
-      "name": "【工程租借】機具設備編號 008",
-      "price": 5400
+      "name": "【Honda】手提式發電機 EU22i",
+      "price": 2800
     },
     {
-      "name": "【工程租借】機具設備編號 009",
-      "price": 5700
+      "name": "【Toku】電動震動器 VF-30",
+      "price": 3600
     },
     {
-      "name": "【工程租借】機具設備編號 010",
-      "price": 6000
+      "name": "【Wacker Neuson】混凝土地坪整平機 CRT48",
+      "price": 10500
+    },
+    {
+      "name": "【Makita】工地照明投光燈 DML811",
+      "price": 700
     }
   ]
 }
