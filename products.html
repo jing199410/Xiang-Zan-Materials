@@ -41,6 +41,13 @@
     </div>
   </main>
 
+  <button class="cart-float" onclick="toggleCartPopup()">🛒<span id="cart-count">0</span></button>
+  <div id="cart-popup" class="cart-popup">
+    <h3>購物車清單</h3>
+    <div id="cart-items"></div>
+  </div>
+
+  <script src="cart.js"></script>
   <script>
     let allProducts = [];
     let currentCategory = '全部';
@@ -70,10 +77,6 @@
     function filterCategory(cat) {
       currentCategory = cat;
       renderProducts();
-    }
-
-    function addToCart(id) {
-      alert("已加入購物車（商品 ID: " + id + "）");
     }
 
     function toggleMenu() {
