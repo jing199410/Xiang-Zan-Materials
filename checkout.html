@@ -1,14 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>祥贊建材批發有限公司</title>
+    <title>結帳 - 祥贊建材</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/checkout.js"></script>
 </head>
 <body>
-    <header><h1>祥贊建材批發有限公司</h1></header>
+    <header><h1>結帳資訊填寫</h1></header>
     <main>
-        <p>這是 checkout 頁面，內容開發中...</p>
+        <form id="checkout-form">
+            <label>姓名：<input type="text" name="name" required></label><br>
+            <label>Email：<input type="email" name="email" required></label><br>
+            <label>地址：<input type="text" name="address" required></label><br>
+            <h3>購物明細：</h3>
+            <div id="order-summary">載入中...</div>
+            <button type="submit">送出訂單</button>
+        </form>
     </main>
 </body>
 </html>
