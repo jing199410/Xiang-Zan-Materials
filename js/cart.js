@@ -16,6 +16,7 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function renderProducts(filter = "全部") {
   const container = document.getElementById("product-list");
+  if (!container) return;
   container.innerHTML = "";
   const filtered = filter === "全部" ? products : products.filter(p => p.category === filter);
   filtered.forEach(p => {
@@ -51,6 +52,7 @@ function addToCart(id) {
 
 function renderCategories() {
   const catList = document.getElementById("category-list");
+  if (!catList) return;
   categories.forEach(cat => {
     const btn = document.createElement("button");
     btn.innerText = cat;
@@ -58,12 +60,6 @@ function renderCategories() {
     catList.appendChild(btn);
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("category-list")) renderCategories();
-  if (document.getElementById("product-list")) renderProducts();
-});
-
 
 function renderCart() {
   const container = document.getElementById("cart-items");
@@ -88,5 +84,7 @@ function renderCart() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("cart-items")) renderCart();
+  renderCategories();
+  renderProducts();
+  renderCart();
 });
