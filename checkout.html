@@ -1,1 +1,34 @@
-<!DOCTYPE html><html><head><title>結帳頁</title></head><body><h1>填寫結帳資訊</h1></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>結帳頁 | 祥贊建材</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="checkout.html">結帳</a>
+    </div>
+    <div class="container">
+        <h1>結帳資訊</h1>
+
+        <h2>購物車明細</h2>
+        <div id="cart-items"></div>
+        <p id="cart-total">總計：$0</p>
+        <hr>
+
+        <form>
+            <label>姓名：<input type="text" name="name" required></label><br><br>
+            <label>Email：<input type="email" name="email" required></label><br><br>
+            <label>送貨地址：<input type="text" name="address" required></label><br><br>
+            <button class="button" type="submit">提交訂單</button>
+        </form>
+    </div>
+    <div class="footer">祥贊建材批發有限公司 統編83216499</div>
+    <script src="js/cart.js"></script>
+</body>
+</html>
