@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>商品頁 - 祥贊建材批發有限公司</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
@@ -20,14 +20,25 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
   </header>
   <main class="content">
-    <h1>商品頁</h1>
-    <p>這是 商品頁 的內容區。</p>
+    <h1>商品列表</h1>
+    <div class="controls">
+      <div class="categories" id="categories"></div>
+      <input type="text" id="searchInput" placeholder="搜尋商品名稱…" />
+      <select id="sortSelect">
+        <option value="">價格排序</option>
+        <option value="asc">價格由低至高</option>
+        <option value="desc">價格由高至低</option>
+      </select>
+    </div>
+    <div id="productList" class="product-list"></div>
+    <div id="pagination" class="pagination"></div>
   </main>
+  <script src="products.js"></script>
   <script>
-    function toggleMenu() {
+    function toggleMenu() {{
       var nav = document.getElementById("navLinks");
       nav.classList.toggle("open");
-    }
+    }}
   </script>
 </body>
 </html>
