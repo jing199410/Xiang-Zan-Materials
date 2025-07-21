@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "name": "建材類商品1",
+    "category": "建材類",
+    "price": 1010,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "建材類商品2",
+    "category": "建材類",
+    "price": 1020,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 3,
+    "name": "建材類商品3",
+    "category": "建材類",
+    "price": 1030,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 4,
+    "name": "建材類商品4",
+    "category": "建材類",
+    "price": 1040,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "建材類商品5",
+    "category": "建材類",
+    "price": 1050,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 6,
+    "name": "建材類商品6",
+    "category": "建材類",
+    "price": 1060,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 7,
+    "name": "建材類商品7",
+    "category": "建材類",
+    "price": 1070,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 8,
+    "name": "建材類商品8",
+    "category": "建材類",
+    "price": 1080,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 9,
+    "name": "建材類商品9",
+    "category": "建材類",
+    "price": 1090,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 10,
+    "name": "建材類商品10",
+    "category": "建材類",
+    "price": 1100,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 11,
+    "name": "建材類商品11",
+    "category": "建材類",
+    "price": 1110,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 12,
+    "name": "建材類商品12",
+    "category": "建材類",
+    "price": 1120,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 13,
+    "name": "建材類商品13",
+    "category": "建材類",
+    "price": 1130,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 14,
+    "name": "建材類商品14",
+    "category": "建材類",
+    "price": 1140,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 15,
+    "name": "建材類商品15",
+    "category": "建材類",
+    "price": 1150,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 16,
+    "name": "五金類商品16",
+    "category": "五金類",
+    "price": 1160,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 17,
+    "name": "五金類商品17",
+    "category": "五金類",
+    "price": 1170,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 18,
+    "name": "五金類商品18",
+    "category": "五金類",
+    "price": 1180,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 19,
+    "name": "五金類商品19",
+    "category": "五金類",
+    "price": 1190,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 20,
+    "name": "五金類商品20",
+    "category": "五金類",
+    "price": 1200,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 21,
+    "name": "五金類商品21",
+    "category": "五金類",
+    "price": 1210,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 22,
+    "name": "五金類商品22",
+    "category": "五金類",
+    "price": 1220,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 23,
+    "name": "五金類商品23",
+    "category": "五金類",
+    "price": 1230,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 24,
+    "name": "五金類商品24",
+    "category": "五金類",
+    "price": 1240,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 25,
+    "name": "五金類商品25",
+    "category": "五金類",
+    "price": 1250,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 26,
+    "name": "五金類商品26",
+    "category": "五金類",
+    "price": 1260,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 27,
+    "name": "五金類商品27",
+    "category": "五金類",
+    "price": 1270,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 28,
+    "name": "五金類商品28",
+    "category": "五金類",
+    "price": 1280,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 29,
+    "name": "五金類商品29",
+    "category": "五金類",
+    "price": 1290,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 30,
+    "name": "五金類商品30",
+    "category": "五金類",
+    "price": 1300,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 31,
+    "name": "油漆黏劑類商品31",
+    "category": "油漆黏劑類",
+    "price": 1310,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 32,
+    "name": "油漆黏劑類商品32",
+    "category": "油漆黏劑類",
+    "price": 1320,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 33,
+    "name": "油漆黏劑類商品33",
+    "category": "油漆黏劑類",
+    "price": 1330,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 34,
+    "name": "油漆黏劑類商品34",
+    "category": "油漆黏劑類",
+    "price": 1340,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 35,
+    "name": "油漆黏劑類商品35",
+    "category": "油漆黏劑類",
+    "price": 1350,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 36,
+    "name": "油漆黏劑類商品36",
+    "category": "油漆黏劑類",
+    "price": 1360,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 37,
+    "name": "油漆黏劑類商品37",
+    "category": "油漆黏劑類",
+    "price": 1370,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 38,
+    "name": "油漆黏劑類商品38",
+    "category": "油漆黏劑類",
+    "price": 1380,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 39,
+    "name": "油漆黏劑類商品39",
+    "category": "油漆黏劑類",
+    "price": 1390,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 40,
+    "name": "油漆黏劑類商品40",
+    "category": "油漆黏劑類",
+    "price": 1400,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 41,
+    "name": "油漆黏劑類商品41",
+    "category": "油漆黏劑類",
+    "price": 1410,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 42,
+    "name": "油漆黏劑類商品42",
+    "category": "油漆黏劑類",
+    "price": 1420,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 43,
+    "name": "油漆黏劑類商品43",
+    "category": "油漆黏劑類",
+    "price": 1430,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 44,
+    "name": "油漆黏劑類商品44",
+    "category": "油漆黏劑類",
+    "price": 1440,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 45,
+    "name": "油漆黏劑類商品45",
+    "category": "油漆黏劑類",
+    "price": 1450,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 46,
+    "name": "土木工具類商品46",
+    "category": "土木工具類",
+    "price": 1460,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 47,
+    "name": "土木工具類商品47",
+    "category": "土木工具類",
+    "price": 1470,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 48,
+    "name": "土木工具類商品48",
+    "category": "土木工具類",
+    "price": 1480,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 49,
+    "name": "土木工具類商品49",
+    "category": "土木工具類",
+    "price": 1490,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 50,
+    "name": "土木工具類商品50",
+    "category": "土木工具類",
+    "price": 1500,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 51,
+    "name": "土木工具類商品51",
+    "category": "土木工具類",
+    "price": 1510,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 52,
+    "name": "土木工具類商品52",
+    "category": "土木工具類",
+    "price": 1520,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 53,
+    "name": "土木工具類商品53",
+    "category": "土木工具類",
+    "price": 1530,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 54,
+    "name": "土木工具類商品54",
+    "category": "土木工具類",
+    "price": 1540,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 55,
+    "name": "土木工具類商品55",
+    "category": "土木工具類",
+    "price": 1550,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 56,
+    "name": "土木工具類商品56",
+    "category": "土木工具類",
+    "price": 1560,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 57,
+    "name": "土木工具類商品57",
+    "category": "土木工具類",
+    "price": 1570,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 58,
+    "name": "土木工具類商品58",
+    "category": "土木工具類",
+    "price": 1580,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 59,
+    "name": "土木工具類商品59",
+    "category": "土木工具類",
+    "price": 1590,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 60,
+    "name": "土木工具類商品60",
+    "category": "土木工具類",
+    "price": 1600,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 61,
+    "name": "手工具類商品61",
+    "category": "手工具類",
+    "price": 1610,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 62,
+    "name": "手工具類商品62",
+    "category": "手工具類",
+    "price": 1620,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 63,
+    "name": "手工具類商品63",
+    "category": "手工具類",
+    "price": 1630,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 64,
+    "name": "手工具類商品64",
+    "category": "手工具類",
+    "price": 1640,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 65,
+    "name": "手工具類商品65",
+    "category": "手工具類",
+    "price": 1650,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 66,
+    "name": "手工具類商品66",
+    "category": "手工具類",
+    "price": 1660,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 67,
+    "name": "手工具類商品67",
+    "category": "手工具類",
+    "price": 1670,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 68,
+    "name": "手工具類商品68",
+    "category": "手工具類",
+    "price": 1680,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 69,
+    "name": "手工具類商品69",
+    "category": "手工具類",
+    "price": 1690,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 70,
+    "name": "手工具類商品70",
+    "category": "手工具類",
+    "price": 1700,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 71,
+    "name": "電動工具類商品71",
+    "category": "電動工具類",
+    "price": 1710,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 72,
+    "name": "電動工具類商品72",
+    "category": "電動工具類",
+    "price": 1720,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 73,
+    "name": "電動工具類商品73",
+    "category": "電動工具類",
+    "price": 1730,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 74,
+    "name": "電動工具類商品74",
+    "category": "電動工具類",
+    "price": 1740,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 75,
+    "name": "電動工具類商品75",
+    "category": "電動工具類",
+    "price": 1750,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 76,
+    "name": "電動工具類商品76",
+    "category": "電動工具類",
+    "price": 1760,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 77,
+    "name": "電動工具類商品77",
+    "category": "電動工具類",
+    "price": 1770,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 78,
+    "name": "電動工具類商品78",
+    "category": "電動工具類",
+    "price": 1780,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 79,
+    "name": "電動工具類商品79",
+    "category": "電動工具類",
+    "price": 1790,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 80,
+    "name": "電動工具類商品80",
+    "category": "電動工具類",
+    "price": 1800,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 81,
+    "name": "電動工具類商品81",
+    "category": "電動工具類",
+    "price": 1810,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 82,
+    "name": "電動工具類商品82",
+    "category": "電動工具類",
+    "price": 1820,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 83,
+    "name": "電動工具類商品83",
+    "category": "電動工具類",
+    "price": 1830,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 84,
+    "name": "電動工具類商品84",
+    "category": "電動工具類",
+    "price": 1840,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 85,
+    "name": "電動工具類商品85",
+    "category": "電動工具類",
+    "price": 1850,
+    "isRental": false,
+    "dailyPrice": null,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 86,
+    "name": "器材租借商品86",
+    "category": "器材租借",
+    "price": 1860,
+    "isRental": true,
+    "dailyPrice": 250,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 87,
+    "name": "器材租借商品87",
+    "category": "器材租借",
+    "price": 1870,
+    "isRental": true,
+    "dailyPrice": 300,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 88,
+    "name": "器材租借商品88",
+    "category": "器材租借",
+    "price": 1880,
+    "isRental": true,
+    "dailyPrice": 350,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 89,
+    "name": "器材租借商品89",
+    "category": "器材租借",
+    "price": 1890,
+    "isRental": true,
+    "dailyPrice": 400,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 90,
+    "name": "器材租借商品90",
+    "category": "器材租借",
+    "price": 1900,
+    "isRental": true,
+    "dailyPrice": 200,
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 91,
+    "name": "器材租借商品91",
+    "category": "器材租借",
+    "price": 1910,
+    "isRental": true,
+    "dailyPrice": 250,
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 92,
+    "name": "器材租借商品92",
+    "category": "器材租借",
+    "price": 1920,
+    "isRental": true,
+    "dailyPrice": 300,
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 93,
+    "name": "器材租借商品93",
+    "category": "器材租借",
+    "price": 1930,
+    "isRental": true,
+    "dailyPrice": 350,
+    "image": "assets/img/product4.jpg"
+  },
+  {
+    "id": 94,
+    "name": "器材租借商品94",
+    "category": "器材租借",
+    "price": 1940,
+    "isRental": true,
+    "dailyPrice": 400,
+    "image": "assets/img/product5.jpg"
+  },
+  {
+    "id": 95,
+    "name": "器材租借商品95",
+    "category": "器材租借",
+    "price": 1950,
+    "isRental": true,
+    "dailyPrice": 200,
+    "image": "assets/img/product6.jpg"
+  },
+  {
+    "id": 96,
+    "name": "器材租借商品96",
+    "category": "器材租借",
+    "price": 1960,
+    "isRental": true,
+    "dailyPrice": 250,
+    "image": "assets/img/product7.jpg"
+  },
+  {
+    "id": 97,
+    "name": "器材租借商品97",
+    "category": "器材租借",
+    "price": 1970,
+    "isRental": true,
+    "dailyPrice": 300,
+    "image": "assets/img/product8.jpg"
+  },
+  {
+    "id": 98,
+    "name": "器材租借商品98",
+    "category": "器材租借",
+    "price": 1980,
+    "isRental": true,
+    "dailyPrice": 350,
+    "image": "assets/img/product9.jpg"
+  },
+  {
+    "id": 99,
+    "name": "器材租借商品99",
+    "category": "器材租借",
+    "price": 1990,
+    "isRental": true,
+    "dailyPrice": 400,
+    "image": "assets/img/product10.jpg"
+  },
+  {
+    "id": 100,
+    "name": "器材租借商品100",
+    "category": "器材租借",
+    "price": 2000,
+    "isRental": true,
+    "dailyPrice": 200,
+    "image": "assets/img/product1.jpg"
+  }
+]
