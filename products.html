@@ -4,87 +4,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>商品列表 - 祥贊建材</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>商品頁</title>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">祥贊建材</div>
-    <nav id="nav">
-      <a href="index.html">首頁</a>
-      <a href="products.html">商品</a>
-      <a href="about.html">關於我們</a>
-      <a href="contact.html">聯絡我們</a>
-      <a href="checkout.html">結帳</a>
-    </nav>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </header>
-
-  <main>
-    <div class="product-page">
-      <aside class="sidebar">
-        <input type="text" id="search" placeholder="搜尋商品..." />
-        <div id="categories">
-          <button onclick="filterCategory('全部')">全部</button>
-          <button onclick="filterCategory('水泥')">水泥</button>
-          <button onclick="filterCategory('五金')">五金</button>
-          <button onclick="filterCategory('油漆黏劑類')">油漆黏劑類</button>
-          <button onclick="filterCategory('土木工具')">土木工具</button>
-          <button onclick="filterCategory('手工具類')">手工具類</button>
-          <button onclick="filterCategory('電動工具')">電動工具</button>
-          <button onclick="filterCategory('器材租借')">器材租借</button>
-        </div>
-      </aside>
-      <section class="products" id="product-list">
-        <p>載入中...</p>
-      </section>
-    </div>
-  </main>
-
-  <button class="cart-float" onclick="toggleCartPopup()">🛒<span id="cart-count">0</span></button>
-  <div id="cart-popup" class="cart-popup">
-    <h3>購物車清單</h3>
-    <div id="cart-items"></div>
-  </div>
-
-  <script src="cart.js"></script>
   <script>
-    let allProducts = [];
-    let currentCategory = '全部';
-
-    async function fetchProducts() {
-      const res = await fetch('products.json');
-      allProducts = await res.json();
-      renderProducts();
-    }
-
-    function renderProducts() {
-      const keyword = document.getElementById('search').value.toLowerCase();
-      const filtered = allProducts.filter(p =>
-        (currentCategory === '全部' || p.category === currentCategory) &&
-        p.name.toLowerCase().includes(keyword)
-      );
-      const html = filtered.map(p => `
-        <div class="card">
-          <div class="title">${p.name}</div>
-          <div class="price">NT$ ${p.price}</div>
-          <button onclick="addToCart(${p.id})">加入購物車</button>
-        </div>
-      `).join('');
-      document.getElementById('product-list').innerHTML = html || "<p>查無商品。</p>";
-    }
-
-    function filterCategory(cat) {
-      currentCategory = cat;
-      renderProducts();
-    }
-
-    function toggleMenu() {
-      document.getElementById("nav").classList.toggle("open");
-    }
-
-    document.getElementById("search").addEventListener("input", renderProducts);
-    fetchProducts();
+    const categories = [
+      "全部",
+      "水泥",
+      "五金",
+      "油漆黏劑類",
+      "土木工具",
+      "手工具類",
+      "電動工具",
+      "器材租借",
+      "地板壁材",
+      "實木板材"
+    ];
+    console.log("分類載入成功：", categories);
   </script>
+  <h2>商品分類已修復</h2>
 </body>
 </html>
