@@ -26,19 +26,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <a href="product.html?id=${product.id}">
                     <img src="${product.image}" alt="${product.name}">
                     <h3>${product.name}</h3>
-    <button onclick='addToCartFromProduct({
-        id: ${product.id},
-        name: "${product.name}",
-        price: ${product.price},
-        dailyPrice: ${product.dailyPrice},
-        isRental: ${product.isRental},
-        image: "${product.image}",
-        quantity: 1,
-        days: 1
-    })'>加入購物車</button>
                     <p>${product.isRental ? '每日租金：' + product.dailyPrice + '元' : '價格：' + product.price + '元'}</p>
                 </a>
             `;
+
+            const button = document.createElement('button');
+            button.textContent = '加入購物車';
+            button.addEventListener('click', () => {
+                const item = {
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    dailyPrice: product.dailyPrice,
+                    isRental: product.isRental,
+                    image: product.image,
+                    quantity: 1,
+                    days: 1
+                };
+                addToCartFromProduct(item);
+            });
+
+            card.appendChild(button);
             container.appendChild(card);
         });
 
