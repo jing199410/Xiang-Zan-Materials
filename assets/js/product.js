@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    const handleAdd = () => {
+    let html = `
+        <div class="product-card fade-in" style="max-width:600px;margin:auto;">
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>分類：${product.category}</p>
+            <p>${product.isRental ? '每日租金：' + product.dailyPrice + '元' : '價格：' + product.price + '元'}</p>
+            <button id="add-to-cart">加入購物車</button>
+        </div>`;
+    container.innerHTML = html;
+
+    document.getElementById('add-to-cart').addEventListener('click', () => {
         const item = {
             id: product.id,
             name: product.name,
@@ -23,15 +33,5 @@ document.addEventListener('DOMContentLoaded', async () => {
             days: 1
         };
         addToCartFromProduct(item);
-    };
-
-    let html = `
-        <div class="product-card fade-in" style="max-width:600px;margin:auto;">
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p>分類：${product.category}</p>
-            <p>${product.isRental ? '每日租金：' + product.dailyPrice + '元' : '價格：' + product.price + '元'}</p>
-            <button onclick="(${handleAdd})()">加入購物車</button>
-        </div>`;
-    container.innerHTML = html;
+    });
 });
