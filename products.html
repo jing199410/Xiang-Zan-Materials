@@ -8,7 +8,14 @@
     <script defer src="assets/js/products.js"></script>
 </head>
 <body>
-    <header><h1>商品列表</h1></header>
+    <header>
+        <h1>商品列表</h1>
+        <nav>
+            <a href="index.html">首頁</a> |
+            <a href="cart.html">購物車</a> |
+            <a href="checkout.html">結帳</a>
+        </nav>
+    </header>
     <main>
         <div class="fade-in" style="margin-bottom:1em;">
             <label>分類：
@@ -27,6 +34,7 @@
             <button id="apply-filter">套用篩選</button>
         </div>
         <div id="product-list" class="product-grid"></div>
+        <div id="pagination" style="text-align:center; margin-top: 1em;"></div>
     </main>
 </body>
 </html>
