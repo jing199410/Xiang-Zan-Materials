@@ -7,56 +7,41 @@
   },
   {
     "id": 2,
-    "name": "台泥水泥 50kg（高強度）",
-    "category": "水泥",
-    "price": 210
-  },
-  {
-    "id": 3,
-    "name": "矽利康防水膠（灰）",
+    "name": "矽利康防水膠",
     "category": "塗料",
     "price": 95
   },
   {
-    "id": 4,
-    "name": "矽利康防水膠（透明）",
-    "category": "塗料",
-    "price": 144
-  },
-  {
-    "id": 5,
+    "id": 3,
     "name": "十字螺絲起子",
     "category": "工具",
     "price": 80
   },
   {
-    "id": 6,
-    "name": "鷹架租借",
-    "category": "器材租借",
-    "price": 300
-  },
-  {
-    "id": 7,
-    "name": "測量儀租借",
-    "category": "器材租借",
-    "price": 500
-  },
-  {
-    "id": 8,
+    "id": 4,
     "name": "鋼鐵萬用板手",
     "category": "五金",
     "price": 120
   },
   {
-    "id": 9,
-    "name": "電動砂輪機",
-    "category": "工具",
-    "price": 3500
+    "id": 5,
+    "name": "鷹架租借",
+    "category": "器材租借",
+    "price": 300,
+    "rental": true
   },
   {
-    "id": 10,
-    "name": "工地專用安全帽",
-    "category": "五金",
-    "price": 320
+    "id": 6,
+    "name": "測量儀租借",
+    "category": "器材租借",
+    "price": 500,
+    "rental": true
+  },
+  {
+    "id": 7,
+    "name": "電動鑽機租借",
+    "category": "器材租借",
+    "price": 800,
+    "rental": true
   }
 ]

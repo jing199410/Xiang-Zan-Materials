@@ -49,13 +49,15 @@ function render() {
   const list = document.getElementById("productList");
   const start = (currentPage - 1) * perPage;
   const paged = filtered.slice(start, start + perPage);
-  list.innerHTML = paged.map(p => `
-    <div class="card">
+  list.innerHTML = paged.map(p => {
+    const input = p.rental ? `<input type='number' min='1' placeholder='租借天數' id='days-${p.id}'/>` : '';
+    return `<div class="card">
       <div class="name">${p.name}</div>
-      <div class="price">NT$ ${p.price}</div>
-      <button onclick="alert('已加入購物車')">加入購物車</button>
-    </div>
-  `).join("");
+      <div class="price">NT$ ${p.price}${p.rental ? "／日" : ""}</div>
+      ${input}
+      <button onclick="addToCart(${p.id})">加入購物車</button>
+    </div>`;
+  }).join("");
 
   const totalPages = Math.ceil(filtered.length / perPage);
   const pageDiv = document.getElementById("pagination");
@@ -68,4 +70,19 @@ function render() {
 function goPage(p) {
   currentPage = p;
   render();
+}
+
+function addToCart(id) {
+  const product = products.find(p => p.id === id);
+  let days = 1;
+  if (product.rental) {
+    const input = document.getElementById("days-" + id);
+    days = parseInt(input.value);
+    if (!days || days < 1) {
+      alert("請輸入正確租借天數");
+      return;
+    }
+  }
+  const total = product.price * days;
+  alert(`已加入購物車：${product.name} ${product.rental ? `（租 ${days} 天，共 NT$${total}）` : ""}`);
 }
