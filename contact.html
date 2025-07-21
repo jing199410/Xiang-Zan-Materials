@@ -1,14 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>祥贊建材批發有限公司</title>
+    <title>聯絡我們 - 祥贊建材</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('感謝您的留言，我們將儘快與您聯繫！');
+                form.reset();
+            });
+        });
+    </script>
 </head>
 <body>
-    <header><h1>祥贊建材批發有限公司</h1></header>
+    <header><h1>聯絡我們</h1></header>
     <main>
-        <p>這是 contact 頁面，內容開發中...</p>
+        <form id="contact-form" class="fade-in">
+            <label>姓名：<input type="text" name="name" required></label><br>
+            <label>Email：<input type="email" name="email" required></label><br>
+            <label>留言內容：<textarea name="message" rows="5" required></textarea></label><br>
+            <button type="submit">送出留言</button>
+        </form>
     </main>
 </body>
 </html>
