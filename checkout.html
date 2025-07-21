@@ -1,1 +1,66 @@
-<!DOCTYPE html><html><head><title>結帳頁面</title></head><body><h1>請填寫您的結帳資訊</h1></body></html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>結帳頁面</title>
+  <script src="js/cart.js" defer></script>
+  <style>
+    form { max-width: 500px; margin: 1em auto; display: flex; flex-direction: column; }
+    label { margin-top: 0.5em; }
+    input, textarea { padding: 0.5em; margin-top: 0.2em; }
+    .summary { border: 1px solid #ccc; padding: 1em; margin: 2em auto; border-radius: 8px; max-width: 600px; }
+    button { margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">結帳資訊</h1>
+  <form onsubmit="submitOrder(event)">
+    <label>姓名
+      <input type="text" id="name" required>
+    </label>
+    <label>Email
+      <input type="email" id="email" required>
+    </label>
+    <label>地址
+      <textarea id="address" required></textarea>
+    </label>
+    <button type="submit">送出訂單</button>
+  </form>
+
+  <div class="summary">
+    <h2>訂單明細</h2>
+    <div id="checkout-summary"></div>
+    <h3 id="checkout-total">總金額: NT$0</h3>
+  </div>
+
+  <script>
+    function renderCheckout() {
+      const container = document.getElementById("checkout-summary");
+      if (!container) return;
+      container.innerHTML = "";
+      let total = 0;
+      cart.forEach(item => {
+        const subtotal = item.isRental ? item.price * item.days * item.qty : item.price * item.qty;
+        total += subtotal;
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <p><strong>${item.name}</strong> × ${item.qty}
+          ${item.isRental ? `（租期 ${item.days} 天）` : ""} - NT$${subtotal}</p>
+        `;
+        container.appendChild(div);
+      });
+      const totalElem = document.getElementById("checkout-total");
+      if (totalElem) totalElem.innerText = "總金額: NT$" + total;
+    }
+
+    function submitOrder(event) {
+      event.preventDefault();
+      alert("訂單已送出，我們將盡快與您聯繫！");
+      localStorage.removeItem("cart");
+      window.location.href = "index.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", renderCheckout);
+  </script>
+</body>
+</html>
