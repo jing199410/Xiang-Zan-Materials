@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('product-list');
+    const pagination = document.getElementById('pagination');
     const categorySelect = document.getElementById('filter-category');
     const minPriceInput = document.getElementById('min-price');
     const maxPriceInput = document.getElementById('max-price');
@@ -9,9 +10,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     const res = await fetch('products.json');
     const products = await res.json();
 
-    const render = (filtered) => {
+    let currentPage = 1;
+    const perPage = 10;
+
+    const render = (items, page = 1) => {
+        const start = (page - 1) * perPage;
+        const end = start + perPage;
+        const paginated = items.slice(start, end);
+
         container.innerHTML = '';
-        filtered.forEach(product => {
+        paginated.forEach(product => {
             const card = document.createElement('div');
             card.className = 'product-card fade-in';
             card.innerHTML = `
@@ -23,19 +31,34 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
             container.appendChild(card);
         });
+
+        pagination.innerHTML = '';
+        const totalPages = Math.ceil(items.length / perPage);
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            if (i === page) btn.disabled = true;
+            btn.onclick = () => {
+                currentPage = i;
+                render(items, i);
+            };
+            pagination.appendChild(btn);
+        }
     };
 
-    render(products);
+    let filtered = [...products];
+    render(filtered, currentPage);
 
     filterBtn.addEventListener('click', () => {
         const selectedCat = categorySelect.value;
         const min = parseInt(minPriceInput.value) || 0;
         const max = parseInt(maxPriceInput.value) || Infinity;
 
-        const filtered = products.filter(p => {
+        filtered = products.filter(p => {
             const price = p.isRental ? p.dailyPrice : p.price;
             return (selectedCat === '全部' || p.category === selectedCat) && price >= min && price <= max;
         });
-        render(filtered);
+        currentPage = 1;
+        render(filtered, currentPage);
     });
 });
