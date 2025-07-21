@@ -48,3 +48,24 @@ function removeFromCart(id) {
 }
 
 window.onload = updateCartIcon;
+
+
+function renderCart() {
+  const cartList = document.getElementById("cart-items");
+  const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  cartList.innerHTML = "";
+
+  cartData.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${item.name} - NT$${item.price} x ${item.quantity || 1}`;
+    cartList.appendChild(li);
+  });
+
+  const total = cartData.reduce((sum, item) => sum + item.price * (item.quantity || 1), 0);
+  document.getElementById("cart-total").textContent = `總計：NT$${total}`;
+
+  const footer = document.getElementById("cart-footer");
+  if (footer) {
+    footer.innerHTML = `<button onclick="window.location.href='checkout.html'">前往結帳</button>`;
+  }
+}

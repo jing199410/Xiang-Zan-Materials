@@ -4,75 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>結帳 - 祥贊建材</title>
+  <title>結帳頁面</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">祥贊建材</div>
-    <nav id="nav">
-      <a href="index.html">首頁</a>
-      <a href="products.html">商品</a>
-      <a href="about.html">關於我們</a>
-      <a href="contact.html">聯絡我們</a>
-      <a href="checkout.html">結帳</a>
-    </nav>
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </header>
-
-  <main>
-    <section class="checkout">
-      <h2>購物車明細</h2>
-      <div id="checkout-cart"></div>
-      <div id="checkout-total"></div>
-
-      <h2>結帳資訊</h2>
-      <form onsubmit="submitOrder(event)">
-        <label>姓名：<input type="text" id="name" required /></label><br/>
-        <label>Email：<input type="email" id="email" required /></label><br/>
-        <label>地址：<input type="text" id="address" required /></label><br/>
-        <button type="submit">送出訂單</button>
-      </form>
-    </section>
+  <main style="max-width: 600px; margin: auto; padding: 20px;">
+    <h2>結帳資訊</h2>
+    <form>
+      <label>姓名</label><br/>
+      <input type="text" name="name" required /><br/><br/>
+      <label>Email</label><br/>
+      <input type="email" name="email" required /><br/><br/>
+      <label>地址</label><br/>
+      <textarea name="address" required></textarea><br/><br/>
+      <button type="submit">送出訂單</button>
+    </form>
   </main>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById("nav").classList.toggle("open");
-    }
-
-    function renderCheckoutCart() {
-      const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const container = document.getElementById("checkout-cart");
-      const totalBox = document.getElementById("checkout-total");
-
-      if (cart.length === 0) {
-        container.innerHTML = "<p>購物車是空的</p>";
-        totalBox.innerHTML = "";
-        return;
-      }
-
-      let total = 0;
-      container.innerHTML = cart.map(item => {
-        const sub = item.price * item.quantity;
-        total += sub;
-        return `<div>${item.name} x ${item.quantity} - NT$ ${sub}</div>`;
-      }).join("");
-
-      totalBox.innerHTML = `<strong>總計：NT$ ${total}</strong>`;
-    }
-
-    function submitOrder(event) {
-      event.preventDefault();
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const address = document.getElementById("address").value;
-      alert("訂單已送出，謝謝您！\n\n" + name + " | " + email + " | " + address);
-      localStorage.removeItem("cart");
-      location.reload();
-    }
-
-    renderCheckoutCart();
-  </script>
 </body>
 </html>
