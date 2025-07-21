@@ -1,1 +1,57 @@
-<!DOCTYPE html><html lang='zh-Hant'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>首頁 - 祥贊建材</title><link rel='stylesheet' href='style.css'></head><body><header class='navbar'><div class='logo'>祥贊建材</div><nav id='nav'><a href='index.html'>首頁</a><a href='products.html'>商品</a><a href='about.html'>關於我們</a><a href='contact.html'>聯絡我們</a><a href='checkout.html'>結帳</a></nav><button class='hamburger' onclick='toggleMenu()'>☰</button></header><main><h1>歡迎來到祥贊建材批發</h1></main><script>function toggleMenu(){document.getElementById('nav').classList.toggle('open');}</script></body></html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>祥贊建材批發有限公司</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">祥贊建材</div>
+    <nav id="nav">
+      <a href="index.html">首頁</a>
+      <a href="products.html">商品</a>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+      <a href="checkout.html">結帳</a>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>穩定供貨・價格合理・品質為先</h1>
+      <a href="products.html" class="cta-button">前往商品頁</a>
+    </section>
+
+    <section class="intro">
+      <h2>公司簡介</h2>
+      <p>祥贊建材批發有限公司（統編 83216499）以卓越之姿，深耕建材批發領域。我們專營各式高品質的建材、五金、油漆與工具等多元商品，致力於為業界提供全面且專業的解決方案。</p>
+      <p>我們秉持著「穩定供貨、價格合理、品質為先」三大核心價值，將客戶需求視為首要目標。祥贊建材不僅是您的供應商，更是您專案成功的堅實後盾。</p>
+    </section>
+
+    <section class="features">
+      <h2>我們的服務</h2>
+      <ul>
+        <li>🏗️ 建材供應</li>
+        <li>🔧 工具與五金</li>
+        <li>🎨 油漆黏劑類</li>
+        <li>🔩 器材租借</li>
+      </ul>
+    </section>
+
+    <section class="callout">
+      <a href="checkout.html" class="cta-button">立即結帳</a>
+      <a href="products.html" class="cta-button">瀏覽所有商品</a>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
