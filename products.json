@@ -1,116 +1,50 @@
 [
   {
     "id": 1,
-    "name": "台泥水泥 50kg",
-    "price": 180,
+    "name": "台泥水泥 50kg（低鹼）",
+    "price": 160,
     "category": "水泥"
   },
   {
     "id": 2,
-    "name": "熟料水泥 25kg",
-    "price": 120,
+    "name": "台泥水泥 50kg（一般型）",
+    "price": 145,
     "category": "水泥"
   },
   {
     "id": 3,
-    "name": "不鏽鋼螺絲包",
-    "price": 75,
-    "category": "五金"
+    "name": "矽利康防水膠（耐候型）",
+    "price": 144,
+    "category": "油漆黏劑類"
   },
   {
     "id": 4,
-    "name": "重型鉸鏈組",
-    "price": 160,
-    "category": "五金"
-  },
-  {
-    "id": 5,
-    "name": "黏劑 A 強力型",
+    "name": "矽利康防水膠（普通型）",
     "price": 95,
     "category": "油漆黏劑類"
   },
   {
+    "id": 5,
+    "name": "電動起子機 MAXTOR",
+    "price": 5180,
+    "category": "電動工具"
+  },
+  {
     "id": 6,
-    "name": "乳膠漆 室內白",
-    "price": 320,
-    "category": "油漆黏劑類"
+    "name": "鷹架租借（每日）",
+    "price": 200,
+    "category": "器材租借"
   },
   {
     "id": 7,
-    "name": "塑鋼土 修補劑",
-    "price": 88,
-    "category": "油漆黏劑類"
+    "name": "測量儀租借（每日）",
+    "price": 300,
+    "category": "器材租借"
   },
   {
     "id": 8,
-    "name": "填縫劑 灰色",
-    "price": 60,
-    "category": "油漆黏劑類"
-  },
-  {
-    "id": 9,
-    "name": "油漆工具組",
-    "price": 210,
-    "category": "油漆黏劑類"
-  },
-  {
-    "id": 10,
-    "name": "木工鐵鎚",
-    "price": 180,
-    "category": "手工具類"
-  },
-  {
-    "id": 11,
-    "name": "鋸子（木材用）",
-    "price": 220,
-    "category": "手工具類"
-  },
-  {
-    "id": 12,
-    "name": "泥作用鏝刀",
-    "price": 90,
-    "category": "土木工具"
-  },
-  {
-    "id": 13,
-    "name": "地坪刮尺",
-    "price": 140,
-    "category": "土木工具"
-  },
-  {
-    "id": 14,
-    "name": "電鑽 500W",
-    "price": 1680,
-    "category": "電動工具"
-  },
-  {
-    "id": 15,
-    "name": "電動起子機",
-    "price": 2280,
-    "category": "電動工具"
-  },
-  {
-    "id": 16,
-    "name": "吸塵器 工業型",
-    "price": 4850,
-    "category": "電動工具"
-  },
-  {
-    "id": 17,
-    "name": "鷹架租借",
+    "name": "電動機具租借（每日）",
     "price": 500,
-    "category": "器材租借"
-  },
-  {
-    "id": 18,
-    "name": "測量儀租借",
-    "price": 350,
-    "category": "器材租借"
-  },
-  {
-    "id": 19,
-    "name": "電動機具租借",
-    "price": 780,
     "category": "器材租借"
   }
 ]

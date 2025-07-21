@@ -2,48 +2,67 @@
 body {
   font-family: 'Noto Sans TC', sans-serif;
   margin: 0;
-  background: #f9fefb;
+  background: #f8f9f5;
   color: #333;
 }
 .navbar {
-  background-color: #d5ead9;
-  padding: 10px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background: #cbe0c1;
+  padding: 1em;
 }
-.logo {
+.navbar .logo {
   font-weight: bold;
-  font-size: 1.2em;
 }
-nav {
-  display: flex;
-  gap: 15px;
-}
-nav a {
+.navbar a {
+  margin: 0 0.5em;
   text-decoration: none;
   color: #333;
 }
-.hamburger {
-  display: none;
-  background: none;
+.sidebar {
+  width: 200px;
+  padding: 1em;
+  background: #eef6eb;
+}
+.products {
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 1em;
+  background: #fff;
+  width: 200px;
+}
+.cart-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #88b06a;
+  color: white;
   border: none;
-  font-size: 1.5em;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 999;
 }
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  nav.open {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
+.cart-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 1em;
+  display: none;
+  z-index: 998;
 }
-main {
-  padding: 20px;
+.cart-popup.show {
+  display: block;
 }
