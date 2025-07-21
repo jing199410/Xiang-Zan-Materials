@@ -2,42 +2,88 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>結帳頁 | 祥贊建材</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>結帳頁 | 祥贊建材</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .qty-btn {
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em;
+      font-size: 1em;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">首頁</a>
-        <a href="products.html">商品</a>
-        <a href="contact.html">聯絡我們</a>
-        <a href="checkout.html">結帳</a>
-    </div>
-    <div class="container">
-        <h1>結帳資訊</h1>
+  <div class="navbar">
+    <a href="index.html">首頁</a>
+    <a href="products.html">商品</a>
+    <a href="contact.html">聯絡我們</a>
+    <a href="checkout.html">結帳</a>
+  </div>
+  <div class="container">
+    <h1>結帳資訊</h1>
 
-        <h2>購物車明細</h2>
-        <div id="cart-items"></div>
-        <p id="cart-total">總計：$0</p>
-        <hr>
+    <h2>購物車明細</h2>
+    <div id="cart-items"></div>
+    <p id="cart-total">總計：$0</p>
+    <hr>
 
-        <form id="checkout-form">
-            <label>姓名：<input type="text" name="name" required></label><br><br>
-            <label>Email：<input type="email" name="email" required></label><br><br>
-            <label>送貨地址：<input type="text" name="address" required></label><br><br>
-            <button class="button" type="submit">提交訂單</button>
-        </form>
-    </div>
-    <div class="footer">祥贊建材批發有限公司 統編83216499</div>
-    <script src="js/cart.js"></script>
-    <script>
-      // 感謝視窗與清空動作
-      document.getElementById("checkout-form").addEventListener("submit", function(e) {
-        e.preventDefault();
-        alert("💌 感謝您的訂購！\n我們已收到您的訂單，將盡快為您安排出貨。\n請耐心等候，若有任何問題歡迎隨時與我們聯繫。\n\n— 祥贊建材團隊 敬上");
-        localStorage.removeItem("cart");
-        window.location.href = "index.html";
+    <form id="checkout-form">
+      <label>姓名：<input type="text" name="name" required></label><br><br>
+      <label>Email：<input type="email" name="email" required></label><br><br>
+      <label>送貨地址：<input type="text" name="address" required></label><br><br>
+      <button class="button" type="submit">提交訂單</button>
+    </form>
+  </div>
+  <div class="footer">祥贊建材批發有限公司 統編83216499</div>
+
+  <script>
+    function renderCart() {
+      const cartContainer = document.getElementById('cart-items');
+      const totalElement = document.getElementById('cart-total');
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cartContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <p>
+            <strong>${item.name}</strong> | $${item.price} x 
+            <button class="qty-btn" onclick="changeQty(${index}, -1)">－</button>
+            ${item.quantity}
+            <button class="qty-btn" onclick="changeQty(${index}, 1)">＋</button>
+            ＝ $${itemTotal}
+          </p>
+        `;
+        cartContainer.appendChild(div);
       });
-    </script>
+
+      totalElement.textContent = "總計：$" + total;
+    }
+
+    function changeQty(index, delta) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart[index]) {
+        cart[index].quantity += delta;
+        if (cart[index].quantity <= 0) {
+          cart.splice(index, 1);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+      }
+    }
+
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("💌 感謝您的訂購！\n我們已收到您的訂單，將盡快為您安排出貨。\n請耐心等候，若有任何問題歡迎隨時與我們聯繫。\n\n— 祥贊建材團隊 敬上");
+      localStorage.removeItem("cart");
+      window.location.href = "index.html";
+    });
+
+    renderCart();
+  </script>
 </body>
 </html>
