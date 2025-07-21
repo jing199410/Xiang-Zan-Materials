@@ -21,7 +21,7 @@
         <p id="cart-total">總計：$0</p>
         <hr>
 
-        <form>
+        <form id="checkout-form">
             <label>姓名：<input type="text" name="name" required></label><br><br>
             <label>Email：<input type="email" name="email" required></label><br><br>
             <label>送貨地址：<input type="text" name="address" required></label><br><br>
@@ -30,5 +30,14 @@
     </div>
     <div class="footer">祥贊建材批發有限公司 統編83216499</div>
     <script src="js/cart.js"></script>
+    <script>
+      // 感謝視窗與清空動作
+      document.getElementById("checkout-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("💌 感謝您的訂購！\n我們已收到您的訂單，將盡快為您安排出貨。\n請耐心等候，若有任何問題歡迎隨時與我們聯繫。\n\n— 祥贊建材團隊 敬上");
+        localStorage.removeItem("cart");
+        window.location.href = "index.html";
+      });
+    </script>
 </body>
 </html>
