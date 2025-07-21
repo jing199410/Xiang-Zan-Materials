@@ -1,18 +1,28 @@
 
-.category-button {
-  min-width: 120px;
-  padding: 10px 16px;
-  margin: 5px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-  cursor: pointer;
-  display: inline-block;
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
-
-.category-button.active {
-  background-color: #cce5dd;
-  border-color: #66bb99;
-  font-weight: bold;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #d8efe0;
+}
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2e5d4f;
+}
+.hero {
+  padding: 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eeeeee;
 }
