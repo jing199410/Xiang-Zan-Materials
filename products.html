@@ -1,14 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>祥贊建材批發有限公司</title>
+    <title>所有商品 - 祥贊建材</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/products.js"></script>
 </head>
 <body>
-    <header><h1>祥贊建材批發有限公司</h1></header>
+    <header><h1>商品列表</h1></header>
     <main>
-        <p>這是 products 頁面，內容開發中...</p>
+        <div class="fade-in" style="margin-bottom:1em;">
+            <label>分類：
+                <select id="filter-category">
+                    <option>全部</option>
+                    <option>建材類</option>
+                    <option>五金類</option>
+                    <option>油漆黏劑類</option>
+                    <option>土木工具類</option>
+                    <option>手工具類</option>
+                    <option>電動工具類</option>
+                    <option>器材租借</option>
+                </select>
+            </label>
+            <label>價格區間：<input type="number" id="min-price" placeholder="最小"> - <input type="number" id="max-price" placeholder="最大"></label>
+            <button id="apply-filter">套用篩選</button>
+        </div>
+        <div id="product-list" class="product-grid"></div>
     </main>
 </body>
 </html>
