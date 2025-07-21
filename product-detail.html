@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>商品詳情 | 祥贊建材</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .detail-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 1em;
+    }
+    .detail-card {
+      border: 1px solid #ccc;
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .detail-card h2 {
+      margin-top: 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 1em;
+      text-decoration: none;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">首頁</a>
+    <a href="products.html">商品</a>
+    <a href="contact.html">聯絡我們</a>
+    <a href="checkout.html">結帳</a>
+  </div>
+  <div class="container detail-container">
+    <div class="detail-card" id="productDetail">
+      <h2>載入中...</h2>
+      <p></p>
+    </div>
+    <a href="products.html" class="back-link">← 返回商品列表</a>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productName = decodeURIComponent(urlParams.get('name'));
+
+    fetch("assets/products.json")
+      .then(res => res.json())
+      .then(data => {
+        let found = null;
+        Object.values(data).flat().forEach(product => {
+          if (product.name === productName) found = product;
+        });
+
+        const container = document.getElementById("productDetail");
+        if (found) {
+          container.innerHTML = `
+            <h2>${found.name}</h2>
+            <p>價格：$${found.price}</p>
+            <button class="button add-to-cart" data-name="${found.name}" data-price="${found.price}">加入購物車</button>
+          `;
+        } else {
+          container.innerHTML = "<h2>找不到此商品</h2>";
+        }
+      });
+
+    document.addEventListener("click", function (e) {
+      if (e.target.classList.contains("add-to-cart")) {
+        const name = e.target.dataset.name;
+        const price = parseInt(e.target.dataset.price);
+        let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        const existing = cart.find(p => p.name === name);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("已加入購物車！");
+      }
+    });
+  </script>
+</body>
+</html>
