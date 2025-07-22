@@ -14,11 +14,39 @@ h1 {
   text-align: center;
   color: #333;
 }
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.filter-button {
+  padding: 0.4em 1em;
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.filter-button.active {
+  background: #88c057;
+  color: white;
+}
+select {
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 6px;
+}
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5em;
-  margin-top: 2em;
 }
 .card {
   background: #f9f9f9;
