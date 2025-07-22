@@ -81,3 +81,37 @@ select {
   border-radius: 8px;
   cursor: pointer;
 }
+
+.hero-banner {
+  position: relative;
+  height: 100vh;
+  background-image: url('../assets/img/hero-bathroom.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2em;
+  border-radius: 12px;
+  max-width: 480px;
+}
+.hero-overlay h1 {
+  font-size: 2.5em;
+  margin: 0 0 0.5em;
+}
+.hero-overlay p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+.hero-overlay .button {
+  background-color: #88c057;
+  color: white;
+  padding: 0.6em 1.5em;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
