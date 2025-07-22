@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <title>祥贊建材首頁</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
   <div class="hero-banner">
@@ -15,7 +17,9 @@
     </div>
   </div>
 
-<section class="brand-section">
+
+  <div class="section-divider"></div>
+  <section class="brand-section" data-aos="fade-up">
   <div class="brand-image">
     <img src="assets/img/brand-interior.jpg" alt="品牌風格圖">
   </div>
@@ -27,6 +31,17 @@
       祥贊建材陪你一起實現每一個空間想像。
     </p>
     <a href="about.html" class="button">了解更多</a>
+  </div>
+</section>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+<section class="carousel" data-aos="fade-up">
+  <div class="carousel-track">
+    <img src="assets/img/brand-interior.jpg" alt="設計1" />
+    <img src="assets/img/hero-bathroom.jpg" alt="設計2" />
   </div>
 </section>
 
