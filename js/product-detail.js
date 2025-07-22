@@ -38,8 +38,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="detail-content">
           <h2>\${product.name}</h2>
           <p class="detail-price">價格：NT$\${product.price}</p>
-          <p class="detail-desc">\${product.description || "商品說明將在此顯示。"}</p>
-          <div class="detail-actions">
+          
+  <div class="detail-specs">
+    <h3>商品規格</h3>
+    <table id="spec-table"></table>
+  </div>
+  <p class="detail-desc">\${product.description || "商品說明將在此顯示。"}</p>
+          
+  <div class="detail-rental" id="rental-box" style="display:none;">
+    <label>租借天數：<input type="number" id="rental-days" value="1" min="1" /></label>
+    <p id="rental-total">總計：NT$0</p>
+  </div>
+  <div class="detail-actions">
             <input type="number" id="qty" min="1" value="1"/>
             <button onclick="addToCart('\${product.id}')">加入購物車</button>
           </div>
@@ -48,6 +58,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
 
     GLightbox({ selector: ".glightbox" });
+
+    if (product.rental) {
+      document.getElementById("rental-box").style.display = "block";
+      const pricePerDay = product.price;
+      const daysInput = document.getElementById("rental-days");
+      const totalDisplay = document.getElementById("rental-total");
+      const updateTotal = () => {
+        const days = parseInt(daysInput.value, 10);
+        totalDisplay.textContent = `總計：NT$${pricePerDay * days}`;
+      };
+      daysInput.addEventListener("input", updateTotal);
+      updateTotal();
+    }
+
+
+    if (product.specs) {
+      const table = document.getElementById("spec-table");
+      table.innerHTML = Object.entries(product.specs)
+        .map(([key, val]) => `<tr><th>${key}</th><td>${val}</td></tr>`)
+        .join("");
+    }
+
   } catch (error) {
     container.innerHTML = "<p>載入商品資料時發生錯誤。</p>";
   }
@@ -60,7 +92,8 @@ function addToCart(id) {
   if (existing) {
     existing.qty += qty;
   } else {
-    cart.push({ id, qty });
+    const rentalDays = document.getElementById("rental-days");
+  cart.push({ id, qty, days: rentalDays ? parseInt(rentalDays.value, 10) : undefined });
   }
   localStorage.setItem("cart", JSON.stringify(cart));
   alert("已加入購物車！");

@@ -3,73 +3,44 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>商品列表 | 祥贊建材</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>所有商品 | 祥贊建材批發有限公司</title>
+  <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
-  <div class="container">
-    <h1>全部商品</h1>
-    <div class="controls">
-      <div class="filters" id="categoryFilters"></div>
-      <select id="sortSelect">
-        <option value="default">排序方式</option>
-        <option value="low">價格：低 → 高</option>
-        <option value="high">價格：高 → 低</option>
+  <header>
+    <h1>祥贊建材批發有限公司</h1>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="products.html">所有商品</a>
+      <a href="cart.html">購物車</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filter-bar">
+      <select id="category-filter">
+        <option value="全部">全部分類</option>
       </select>
-    </div>
-    <div class="product-list" id="productList"></div>
-  </div>
+      <select id="sort-filter">
+        <option value="default">排序方式</option>
+        <option value="price-asc">價格：低到高</option>
+        <option value="price-desc">價格：高到低</option>
+      </select>
+    </section>
+
+    <section id="product-list" class="product-grid">
+      <!-- 商品卡片將由 JS 動態插入 -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 祥贊建材批發有限公司 統編83216499</p>
+  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const products = [
-      {{name: "台泥水泥 50kg", price: 320, category: "建材", img: "assets/img/tcc-cement-50kg.jpg"}},
-      {{name: "鋼柄鐵鎚 16oz", price: 180, category: "五金", img: "assets/img/hammer.jpg"}},
-      {{name: "輕鋼架", price: 450, category: "建材", img: "assets/img/tcc-cement-50kg.jpg"}},
-      {{name: "油漆刷 3吋", price: 90, category: "油漆工具", img: "assets/img/hammer.jpg"}}
-    ];
-    let filteredCategory = "全部";
-    let currentSort = "default";
-
-    const renderProducts = () => {
-      const list = document.getElementById("productList");
-      let filtered = products.filter(p => filteredCategory === "全部" || p.category === filteredCategory);
-      if (currentSort === "low") filtered.sort((a,b)=>a.price-b.price);
-      else if (currentSort === "high") filtered.sort((a,b)=>b.price-a.price);
-      list.innerHTML = filtered.map((p, i)=>`
-        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos="fade-up" data-aos-delay="${i*100}">
-          <img src="${p.img}" />
-          <h3>${p.name}</h3>
-          <p>$${p.price}</p>
-          <button class="button">加入購物車</button>
-        </div>
-      `).join("");
-    };
-
-    document.getElementById("sortSelect").addEventListener("change", e => {
-      currentSort = e.target.value;
-      renderProducts();
-    });
-
-    const categories = ["全部", ...new Set(products.map(p=>p.category))];
-    const filterContainer = document.getElementById("categoryFilters");
-    categories.forEach(cat => {
-      const btn = document.createElement("button");
-      btn.className = "filter-button";
-      btn.innerText = cat;
-      btn.onclick = () => {
-        filteredCategory = cat;
-        document.querySelectorAll(".filter-button").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderProducts();
-      };
-      if (cat === "全部") btn.classList.add("active");
-      filterContainer.appendChild(btn);
-    });
-
-    renderProducts();
-  </script>
+  <script>AOS.init();</script>
+  <script src="js/products.js"></script>
 </body>
 </html>
