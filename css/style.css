@@ -209,3 +209,32 @@ select {
 .brand-content .button:hover {
   background: #77ad4f;
 }
+
+
+.brand-story {
+  background: #f3f3f3;
+  padding: 4em 2em;
+  text-align: center;
+}
+.brand-story h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #333;
+}
+.brand-story p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.lively-button {
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+.lively-button:hover {
+  background-color: #77ad4f;
+  transform: scale(1.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
