@@ -20,9 +20,21 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
+    const images = product.images && product.images.length
+      ? product.images
+      : [product.image];
+
+    const imageGallery = images.map((img, idx) =>
+      `<a href="\${img}" class="glightbox" data-gallery="product">
+        <img src="\${img}" alt="\${product.name} \${idx + 1}" class="detail-img" />
+      </a>`
+    ).join("");
+
     container.innerHTML = `
       <div class="detail-box">
-        <img src="\${product.image}" alt="\${product.name}" class="detail-img"/>
+        <div class="detail-gallery">
+          \${imageGallery}
+        </div>
         <div class="detail-content">
           <h2>\${product.name}</h2>
           <p class="detail-price">價格：NT$\${product.price}</p>
@@ -34,6 +46,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       </div>
     `;
+
+    GLightbox({ selector: ".glightbox" });
   } catch (error) {
     container.innerHTML = "<p>載入商品資料時發生錯誤。</p>";
   }

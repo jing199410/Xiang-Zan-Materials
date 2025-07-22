@@ -238,3 +238,21 @@ select {
   transform: scale(1.08);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
+
+
+.detail-gallery {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  max-width: 360px;
+}
+.detail-gallery img {
+  width: 100px;
+  height: auto;
+  border-radius: 6px;
+  cursor: zoom-in;
+  object-fit: cover;
+}
+.detail-gallery a {
+  display: inline-block;
+}
