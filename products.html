@@ -5,110 +5,29 @@
   <meta charset="UTF-8" />
   <title>商品列表 | 祥贊建材</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5em;
-      margin-bottom: 1em;
-    }
-    .filter-button {
-      padding: 0.5em 1em;
-      border: none;
-      background-color: #eee;
-      cursor: pointer;
-      border-radius: 6px;
-      transition: background 0.2s;
-    }
-    .filter-button:hover,
-    .filter-button.active {
-      background-color: #88c057;
-      color: #fff;
-    }
-    .product-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
-  <div class="navbar">
-    <a href="index.html">首頁</a>
-    <a href="products.html">商品</a>
-    <a href="contact.html">聯絡我們</a>
-    <a href="checkout.html">結帳</a>
-  </div>
   <div class="container">
     <h1>全部商品</h1>
-    <div class="filter-bar" id="categoryFilters"></div>
-    <div class="product-list" id="productList"></div>
+    <div class="product-list">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/tcc-cement-50kg.jpg" alt="水泥" />
+        <h3>台泥水泥 50kg</h3>
+        <p>$320</p>
+        <button class="button">加入購物車</button>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/hammer.jpg" alt="鐵鎚" />
+        <h3>鋼柄鐵鎚 16oz</h3>
+        <p>$180</p>
+        <button class="button">加入購物車</button>
+      </div>
+    </div>
   </div>
-  <div class="footer">祥贊建材批發有限公司 統編83216499</div>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const productList = document.getElementById("productList");
-    const categoryFilters = document.getElementById("categoryFilters");
-    let allProducts = {};
-    let currentCategory = "全部";
-
-    function renderProducts(category) {
-      productList.innerHTML = "";
-      const products = category === "全部"
-        ? Object.values(allProducts).flat()
-        : allProducts[category] || [];
-
-      for (const product of products) {
-        const div = document.createElement("div");
-        div.className = "card";
-        div.innerHTML = `
-          <h3>${product.name}</h3>
-          <p>$${product.price}</p>
-          <button class="button add-to-cart" data-name="${product.name}" data-price="${product.price}">加入購物車</button>
-        `;
-        productList.appendChild(div);
-      }
-    }
-
-    function renderFilters(categories) {
-      categoryFilters.innerHTML = "";
-      ["全部", ...categories].forEach((cat) => {
-        const btn = document.createElement("button");
-        btn.className = "filter-button" + (cat === "全部" ? " active" : "");
-        btn.textContent = cat;
-        btn.onclick = () => {
-          document.querySelectorAll(".filter-button").forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
-          currentCategory = cat;
-          renderProducts(cat);
-        };
-        categoryFilters.appendChild(btn);
-      });
-    }
-
-    fetch("assets/products.json")
-      .then((res) => res.json())
-      .then((data) => {
-        allProducts = data;
-        renderFilters(Object.keys(data));
-        renderProducts("全部");
-      });
-
-    document.addEventListener("click", function (e) {
-      if (e.target.classList.contains("add-to-cart")) {
-        const name = e.target.dataset.name;
-        const price = parseInt(e.target.dataset.price);
-        let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-        const existing = cart.find(p => p.name === name);
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ name, price, quantity: 1 });
-        }
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("已加入購物車！");
-      }
-    });
+    AOS.init();
   </script>
 </body>
 </html>
