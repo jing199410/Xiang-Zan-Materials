@@ -194,3 +194,18 @@ select {
   0% {transform: translateX(0);}
   100% {transform: translateX(-50%);}
 }
+
+
+.brand-content .button {
+  background: #88c057;
+  color: white;
+  padding: 0.5em 1.2em;
+  font-size: 0.9em;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.brand-content .button:hover {
+  background: #77ad4f;
+}
