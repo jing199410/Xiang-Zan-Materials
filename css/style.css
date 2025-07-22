@@ -352,3 +352,21 @@ select {
 .product-card button:hover {
   background: #679c45;
 }
+
+.about-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2em 1em 4em 1em;
+}
+.about-image {
+  margin-bottom: 2em;
+}
+.about-intro h2 {
+  color: #77ad4f;
+  margin-bottom: 1em;
+}
+.about-intro p {
+  font-size: 1.15em;
+  color: #444;
+  line-height: 1.9;
+}
