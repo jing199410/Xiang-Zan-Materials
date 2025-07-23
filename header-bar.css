@@ -1,0 +1,35 @@
+.header-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 0 0.8rem 0;
+  background: #fff;
+  border-bottom: 1px solid #e8eaee;
+  margin-bottom: 10px;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+.company-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 18px;
+  border: 2.5px solid #b6c8de;
+  box-shadow: 0 4px 16px #2a466922, 0 1px 0px #fff;
+  background: linear-gradient(145deg,#e8edf5 60%, #f6fafd 100%);
+  padding: 4px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.company-icon:hover {
+  border-color: #2a4669;
+  box-shadow: 0 8px 28px #2a466940, 0 1px 0px #fff;
+}
+.company-title {
+  color: #2a4669;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-family: 'Noto Sans TC', 'Montserrat', 'Open Sans', Arial, sans-serif;
+  background: linear-gradient(90deg,#2a4669,#365a8c 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
