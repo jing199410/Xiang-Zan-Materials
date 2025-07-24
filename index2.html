@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">MyBrand</div>
+    <div class="logo"></div>
     <nav>
       <ul class="nav-links">
         <li><a href="#">首頁</a></li>
@@ -19,7 +19,61 @@
       </ul>
     </nav>
   </header>
+ <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: #f7f7f7;
+      padding: 40px;
+      text-align: center;
+    }
 
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .hex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .hex {
+      width: 120px;
+      aspect-ratio: 1 / 1;
+      background: #007ACC;
+      color: #fff;
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .hex:hover {
+      transform: scale(1.1);
+      background-color: #005fa3;
+    }
+
+    @media (max-width: 600px) {
+      .hex {
+        width: 80px;
+      }
+    }
+  </style>
+</head>
+  <h1>功能選單</h1>
+  <div class="hex-grid">
+    <div class="hex">首頁</div>
+    <div class="hex">商品</div>
+    <div class="hex">購物車</div>
+    <div class="hex">結帳</div>
+    <div class="hex">關於我們</div>
+    <div class="hex">聯絡</div>
+  </div>
   <section class="hero">
     <div class="hero-text">
       <h1>打造專屬你的品牌網站</h1>
