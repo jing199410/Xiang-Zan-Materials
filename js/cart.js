@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addToCart(product) {
-        const existing = cart.find(item => item.name === product.name);
+        const existing = cart.find(item => item.id === product.id);
         if (existing) {
             existing.quantity += 1;
         } else {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', () => {
             const name = btn.dataset.name;
             const price = parseInt(btn.dataset.price);
-            addToCart({ name, price });
+            addToCart({ id, price });
         });
     });
 
