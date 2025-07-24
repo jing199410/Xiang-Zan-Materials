@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="product-card" data-aos="fade-up">
           <a href="product.html?id=${p.id}">
            <!--<img src="${p.image}" alt="${p.name}" />-->
-            <img src="${p.img}" alt="${p.name}" onerror="this.src='assets/img/鋁梯.jpg'" />
+            <img src="${p.img}" alt="${p.name}" data-id="${p.id}" onerror="this.src='assets/img/鋁梯.jpg'" />
 
           </a>
           <div class="info">
