@@ -16,6 +16,14 @@ navbar {
   padding: 1rem 2rem;
   z-index: 999;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f1f1f;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
 .navbar .logo {
   font-size: 1.5rem;
@@ -31,6 +39,31 @@ navbar {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover {
+  background: #e0e0e0;
+  color: #111;
+}
+/* 高級風格按鈕 */
+.button-primary {
+  background: linear-gradient(to right, #444, #888);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-primary:hover {
+  background: linear-gradient(to right, #666, #aaa);
 }
 .container {
   max-width: 960px;
