@@ -8,93 +8,106 @@
 
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
-     <style>
+    <style>
     * {
+      margin: 0; padding: 0;
       box-sizing: border-box;
     }
-
     body {
-      margin: 0;
       font-family: 'Noto Sans TC', sans-serif;
-      background-color: #f4f4f4;
-      padding: 40px 20px;
-    }
-
-    .button-grid {
+      background: linear-gradient(135deg, #f1f1f1, #d6dce5);
+      min-height: 100vh;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      align-items: center;
+      padding: 2rem;
     }
 
-    .feature-button {
-      position: relative;
-      width: 200px;
-      height: 120px;
-      overflow: hidden;
-      border-radius: 16px;
-      cursor: pointer;
-      text-decoration: none;
-      color: white;
-      transition: transform 0.3s;
-    }
-
-    .feature-button img {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.6);
-      transition: 0.3s;
+      max-width: 1000px;
     }
 
-    .feature-button:hover img {
-      filter: brightness(0.8);
-      transform: scale(1.05);
-    }
-
-    .feature-button span {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
+    .feature-card {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 2rem;
+      padding: 2rem 1.5rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-      z-index: 1;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at center, #ffffff, #cccccc);
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #222;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: #555;
     }
 
     @media (max-width: 600px) {
-      .feature-button {
-        width: 100%;
-        height: 100px;
-      }
-      .feature-button span {
-        font-size: 16px;
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
       }
     }
   </style>
 <body>
-  <div class="button-grid">
-    <a href="index.html" class="feature-button">
-      <img src="https://source.unsplash.com/featured/?home" alt="首頁">
-      <span>首頁</span>
-    </a>
-    <a href="products.html" class="feature-button">
-      <img src="https://source.unsplash.com/featured/?building" alt="商品">
-      <span>商品</span>
-    </a>
-    <a href="cart.html" class="feature-button">
-      <img src="https://source.unsplash.com/featured/?cart" alt="購物車">
-      <span>購物車</span>
-    </a>
-    <a href="checkout.html" class="feature-button">
-      <img src="https://source.unsplash.com/featured/?payment" alt="結帳">
-      <span>結帳</span>
-    </a>
-    <a href="about.html" class="feature-button">
-      <img src="https://source.unsplash.com/featured/?team" alt="關於我們">
-      <span>關於我們</span>
-    </a>
+  <div class="grid-container">
+    <div class="feature-card">
+      <div class="feature-icon">🛒</div>
+      <div class="feature-title">商品展示</div>
+      <div class="feature-desc">多樣產品圖文展示</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛍️</div>
+      <div class="feature-title">購物車</div>
+      <div class="feature-desc">管理購物項目與數量</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💳</div>
+      <div class="feature-title">結帳系統</div>
+      <div class="feature-desc">輸入資料與付款流程</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📦</div>
+      <div class="feature-title">訂單追蹤</div>
+      <div class="feature-desc">即時掌握物流資訊</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📞</div>
+      <div class="feature-title">聯絡客服</div>
+      <div class="feature-desc">提供支援與常見問題</div>
+    </div>
   </div>
  
   <div class="hero-banner">
