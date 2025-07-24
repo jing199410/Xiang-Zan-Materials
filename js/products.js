@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       list.innerHTML = shown.map(p => `
         <div class="product-card" data-aos="fade-up">
           <a href="product.html?id=${p.id}">
-            <img src="${p.image}" alt="${p.name}" />
+           <!--<img src="${p.image}" alt="${p.name}" />-->
+            <img src="${p.image}" alt="${p.name}" onerror="this.src='assets/img/鋁梯.jpg'" />
+
           </a>
           <div class="info">
             <h3>${p.name}</h3>
