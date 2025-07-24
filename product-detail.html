@@ -47,12 +47,12 @@
     const urlParams = new URLSearchParams(window.location.search);
     const productName = decodeURIComponent(urlParams.get('id'));
 
-    fetch("assets/products.json")
+    fetch("products.json")
       .then(res => res.json())
       .then(data => {
         let found = null;
         Object.values(data).flat().forEach(product => {
-          if (product.name === productName) found = product;
+          if (product.id === productId) found = product;
         });
 
         const container = document.getElementById("productDetail");
