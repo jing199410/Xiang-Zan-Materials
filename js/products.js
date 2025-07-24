@@ -45,7 +45,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           <div class="info">
             <h3>${p.name}</h3>
             <p>NT$${p.price}</p>
-            <button onclick="addToCart('${p.id}')">加入購物車</button>
+            <!--<button onclick="addToCart('${p.id}')">加入購物車</button>-->
+            <button onclick='addToCart({
+  id: "${p.id}",
+  name: "${p.name}",
+  price: ${p.price},
+  img: "${p.img}"
+})'>加入購物車</button>
           </div>
         </div>
       `).join("");
