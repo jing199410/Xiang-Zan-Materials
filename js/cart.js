@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -37,9 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.add-to-cart');
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
+            const id = btn.dataset.id;
             const name = btn.dataset.name;
             const price = parseInt(btn.dataset.price);
-            addToCart({ id, price });
+            addToCart({ id, name, price });
         });
     });
 
