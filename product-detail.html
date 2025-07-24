@@ -73,7 +73,7 @@
         const name = e.target.dataset.name;
         const price = parseInt(e.target.dataset.price);
         let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-        const existing = cart.find(p => p.name === name);
+        const existing = cart.find(p => p.id === id);
         if (existing) {
           existing.quantity += 1;
         } else {
