@@ -1,46 +1,86 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>祥贊建材首頁</title>
-  <link rel="stylesheet" href="css/style.css" />
-
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-</head>
-    <style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
     * {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
     body {
       font-family: 'Noto Sans TC', sans-serif;
-      background: linear-gradient(135deg, #f1f1f1, #d6dce5);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background: linear-gradient(135deg, #f5f7fa, #e6ecf2);
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 2rem;
+    }
+
+    .hero-banner {
+      background: url('assets/img/hero-banner.jpg') center/cover no-repeat;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-overlay {
+      background: rgba(0,0,0,0.5);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero-overlay p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #2a4e96;
+      color: white;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #183b73;
     }
 
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
-      width: 100%;
-      max-width: 1000px;
+      margin: 4rem auto;
     }
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 2rem;
+      background: white;
+      border-radius: 1.5rem;
       padding: 2rem 1.5rem;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       text-align: center;
       transition: all 0.3s ease;
-      cursor: pointer;
     }
 
     .feature-card:hover {
@@ -49,109 +89,146 @@
     }
 
     .feature-icon {
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle at center, #ffffff, #cccccc);
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: #333;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     .feature-title {
+      font-size: 1.2rem;
       font-weight: 700;
-      font-size: 1.1rem;
-      color: #222;
       margin-bottom: 0.5rem;
     }
 
     .feature-desc {
-      font-size: 0.9rem;
-      color: #555;
+      color: #666;
+      font-size: 0.95rem;
     }
 
-    @media (max-width: 600px) {
-      .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
+    .brand-section, .brand-story {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 4rem 0;
+      gap: 2rem;
+    }
+
+    .brand-image img {
+      max-width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .brand-content {
+      flex: 1;
+    }
+
+    .brand-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #2a4e96;
+    }
+
+    .brand-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .brand-story {
+      text-align: center;
+      background: #f9f9f9;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+    }
+
+    .brand-story h2 {
+      font-size: 1.6rem;
+      color: #2a4e96;
+      margin-bottom: 1rem;
+    }
+
+    .brand-story p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+      .brand-section {
+        flex-direction: column;
       }
     }
   </style>
+</head>
 <body>
-  <div class="grid-container">
-    <div class="feature-card">
-      <div class="feature-icon">🛒</div>
-      <div class="feature-title">商品展示</div>
-      <div class="feature-desc">多樣產品圖文展示</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🛍️</div>
-      <div class="feature-title">購物車</div>
-      <div class="feature-desc">管理購物項目與數量</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">💳</div>
-      <div class="feature-title">結帳系統</div>
-      <div class="feature-desc">輸入資料與付款流程</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📦</div>
-      <div class="feature-title">訂單追蹤</div>
-      <div class="feature-desc">即時掌握物流資訊</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📞</div>
-      <div class="feature-title">聯絡客服</div>
-      <div class="feature-desc">提供支援與常見問題</div>
-    </div>
-  </div>
- 
-  <div class="hero-banner">
+
+  <!-- HERO -->
+  <section class="hero-banner">
     <div class="hero-overlay">
       <h1>打造理想空間，從建材開始</h1>
       <p>祥贊建材，專業、可靠、高品質的建材夥伴</p>
-      <a href="products.html" class="button lively-button">立即選購</a>
+      <a href="products.html" class="button">立即選購</a>
+    </div>
+  </section>
+
+  <!-- 功能區 -->
+  <div class="container">
+    <div class="grid-container" data-aos="fade-up">
+      <div class="feature-card">
+        <div class="feature-icon">🛒</div>
+        <div class="feature-title">商品展示</div>
+        <div class="feature-desc">多樣產品圖文展示</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛍️</div>
+        <div class="feature-title">購物車</div>
+        <div class="feature-desc">管理購物項目與數量</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <div class="feature-title">結帳系統</div>
+        <div class="feature-desc">輸入資料與付款流程</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <div class="feature-title">訂單追蹤</div>
+        <div class="feature-desc">即時掌握物流資訊</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📞</div>
+        <div class="feature-title">聯絡客服</div>
+        <div class="feature-desc">提供支援與常見問題</div>
+      </div>
     </div>
   </div>
 
+  <!-- 品牌區 -->
+  <section class="container brand-section" data-aos="fade-up">
+    <div class="brand-image" data-aos="fade-right">
+      <img src="assets/img/brand-interior.jpg" alt="品牌風格圖">
+    </div>
+    <div class="brand-content" data-aos="fade-left">
+      <h2>從小地方開始，實現你的空間理想</h2>
+      <p>
+        我們不只是販售建材，提供的是打造生活場景的每一個關鍵元素。<br>
+        無論是簡約現代、自然溫潤，還是高質感的室內風格，<br>
+        祥贊建材陪你一起實現每一個空間想像。
+      </p>
+      <a href="about.html" class="button">了解更多</a>
+    </div>
+  </section>
 
-  <div class="section-divider"></div>
-  <section class="brand-section" data-aos="fade-up">
-  <div class="brand-image" data-aos="fade-right">
-    <img src="assets/img/brand-interior.jpg" alt="品牌風格圖">
-  </div>
-  <div class="brand-content" data-aos="fade-left">
-    <h2>從小地方開始，實現你的空間理想</h2>
-    <p>
-      我們不只是販售建材，提供的是打造生活場景的每一個關鍵元素<br>
-      無論是簡約現代、自然溫潤，還是高質感的室內風格<br>
-      祥贊建材陪你一起實現每一個空間想像
-    </p>
-    <a href="about.html" class="button lively-button">了解更多</a>
-  </div>
-</section>
-
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-
-
-
-
-<section class="brand-story" data-aos="fade-up">
-  <div class="container">
+  <!-- 品牌故事 -->
+  <section class="container brand-story" data-aos="fade-up">
     <h2>品牌故事</h2>
     <p>
-      從一間小小的建材店開始，我們一步一腳印地成為在地建築專業的堅實後盾<br>
-      我們深信：<strong>每一塊磚、每一桶漆、每一項工具，都是實現夢想空間的基礎</strong><br>
-      祥贊建材，不只是供應商，是您打造理想家的合作夥伴
+      從一間小小的建材店開始，我們一步一腳印地成為在地建築專業的堅實後盾。<br>
+      我們深信：<strong>每一塊磚、每一桶漆、每一項工具，都是實現夢想空間的基礎。</strong><br>
+      祥贊建材，不只是供應商，是您打造理想家的合作夥伴。
     </p>
-  </div>
-</section>
+  </section>
 
+  <!-- AOS 動畫 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
