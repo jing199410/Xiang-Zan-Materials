@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateCartDisplay() {
     const cartContainer = document.getElementById('cart-items');
     const totalElement = document.getElementById('cart-total');
+    const quantityElement = document.getElementById('cart-quantity');
+
     if (!cartContainer || !totalElement) return;
 
     cartContainer.innerHTML = '';
@@ -27,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     totalElement.textContent = '總計：$' + total;
+    if (quantityElement) {
+    quantityElement.textContent = '商品數量：' + totalQuantity;
+};
   }
 
   // 對外提供此函式：可從其他頁面使用
