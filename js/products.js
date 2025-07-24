@@ -66,13 +66,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-function addToCart(id) {
+function addToCart1(id) {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existing = cart.find(item => item.id === id);
   if (existing) {
     existing.qty += 1;
   } else {
     cart.push({ id, qty: 1 });
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("已加入購物車！");
+}
+function addToCart(product) {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const existing = cart.find(item => item.id === product.id);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({ ...product, qty: 1 });
   }
   localStorage.setItem("cart", JSON.stringify(cart));
   alert("已加入購物車！");
