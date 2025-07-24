@@ -5,6 +5,23 @@ body {
   margin: 0;
   padding: 0;
 }
+navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 999;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .container {
   max-width: 960px;
   margin: auto;
