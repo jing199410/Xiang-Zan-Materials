@@ -8,7 +8,7 @@
 
 header {
   position: relative;
-  background-image: url('assets/img/building-materials-bg.jpg'); /* 請換成你素材的路徑 */
+  background-image: url('assets/img/brand-interior.jpg'); /* 請換成你素材的路徑 */
   background-size: cover; /* 讓圖片覆蓋整個 header */
   background-position: center center;
   background-repeat: no-repeat;
