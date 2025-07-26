@@ -72,6 +72,13 @@
       justify-content: space-between;
       align-items: center;
     }
+    .cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
 
     .cart-item strong {
       font-size: 1.1rem;
@@ -199,7 +206,9 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('cart-item');
     itemDiv.innerHTML = `
+    <div class="cart-item">
       <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
+      </div>
       <div class="cart-item-info">
         <h3>${item.name}</h3>
         <p>$${Number(item.price)} × ${Number(item.quantity)}</p>
