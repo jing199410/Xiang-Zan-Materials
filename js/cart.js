@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateCartDisplay() {
   const cartContainer = document.getElementById('cart-items');
   const totalElement = document.getElementById('cart-total');
-  const quantityElement = document.getElementById('cart-quantity'); // 確認有此元素
+  //const quantityElement = document.getElementById('cart-quantity'); // 確認有此元素
 
   if (!cartContainer || !totalElement) return;
 
