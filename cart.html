@@ -73,8 +73,8 @@
       align-items: center;
     }
     .cart-item img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 0.5rem;
   flex-shrink: 0;
@@ -208,12 +208,13 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
     itemDiv.innerHTML = `
     <div class="cart-item">
       <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
-      </div>
+      
       <div class="cart-item-info">
         <h3>${item.name}</h3>
         <p>$${Number(item.price)} × ${Number(item.quantity)}</p>
       </div>
       <button data-index="${index}" class="remove-btn">✕</button>
+      </div>
     `;
     cartContainer.appendChild(itemDiv);
     total += Number(item.price) * Number(item.quantity);
