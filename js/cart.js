@@ -1,5 +1,3 @@
-// cart.js
-
 document.addEventListener('DOMContentLoaded', function () {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -16,25 +14,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cartContainer.innerHTML = '';
     let total = 0;
+    let totalQuantity = 0;
+
     cart.forEach((item, index) => {
       const itemDiv = document.createElement('div');
+      itemDiv.classList.add('cart-item');
       itemDiv.innerHTML = `
-        <div class="cart-item">
-          <strong>${item.name}</strong> - $${item.price} × ${item.quantity}
-          <button data-index="${index}" class="remove-btn">移除</button>
+        <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
+        <div class="cart-item-info">
+          <h3>${item.name}</h3>
+          <p>$${item.price} × ${item.quantity}</p>
         </div>
+        <button data-index="${index}" class="remove-btn">✕</button>
       `;
       cartContainer.appendChild(itemDiv);
       total += item.price * item.quantity;
+      totalQuantity += item.quantity;
     });
 
     totalElement.textContent = '總計：$' + total;
     if (quantityElement) {
-    quantityElement.textContent = '商品數量：' + totalQuantity;
-};
+      quantityElement.textContent = '商品數量：' + totalQuantity;
+    }
   }
 
-  // 對外提供此函式：可從其他頁面使用
+  // 加入商品函式（可從其他頁面調用）
   window.addToCart = function (product) {
     const existing = cart.find(item => item.id === product.id);
     if (existing) {
@@ -44,20 +48,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     saveCart();
     updateCartDisplay();
-  }
+  };
 
-  // 支援按鈕 data 屬性加入
+  // 綁定 .add-to-cart 按鈕（用於商品頁）
   const buttons = document.querySelectorAll('.add-to-cart');
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       const id = btn.dataset.id;
       const name = btn.dataset.name;
       const price = parseInt(btn.dataset.price);
-      window.addToCart({ id, name, price });
+      const img = btn.dataset.img;
+      window.addToCart({ id, name, price, img });
     });
   });
 
-  // 移除購物車項目
+  // 刪除項目
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('remove-btn')) {
       const index = parseInt(e.target.dataset.index);
@@ -67,6 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 頁面載入時更新購物車
+  // 初始顯示
   updateCartDisplay();
 });
