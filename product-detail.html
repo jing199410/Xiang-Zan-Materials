@@ -248,7 +248,7 @@
         if (found) {
           container.innerHTML = `
            // <img src="${found.img}" alt="${found.name}" onerror="this.src='assets/img/鋁梯.jpg'" />
-            <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
+            <img src="${found.img || 'assets/img/default.jpg'}" alt="${found.name}" />
       
             <h2>${found.name}</h2>
             <p>價格：<strong>$${found.price}</strong></p>
