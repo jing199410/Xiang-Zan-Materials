@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('cart', JSON.stringify(cart));
   }
 
-  function updateCartDisplay() {
+/*  function updateCartDisplay() {
     const cartContainer = document.getElementById('cart-items');
     const totalElement = document.getElementById('cart-total');
     const quantityElement = document.getElementById('cart-quantity');
@@ -37,6 +37,48 @@ document.addEventListener('DOMContentLoaded', function () {
       quantityElement.textContent = '商品數量：' + totalQuantity;
     }
   }
+*/
+  function updateCartDisplay() {
+  const cartContainer = document.getElementById('cart-items');
+  const totalElement = document.getElementById('cart-total');
+  const quantityElement = document.getElementById('cart-quantity'); // 確認有此元素
+
+  if (!cartContainer || !totalElement) return;
+
+  cartContainer.innerHTML = '';
+  let total = 0;
+  let totalQuantity = 0;
+
+  if (cart.length === 0) {
+    cartContainer.innerHTML = '<p>購物車是空的</p>';
+  }
+
+  cart.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+    itemDiv.innerHTML = `
+      <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
+      <div class="cart-item-info">
+        <h3>${item.name}</h3>
+        <p>$${Number(item.price)} × ${Number(item.quantity)}</p>
+      </div>
+      <button data-index="${index}" class="remove-btn">✕</button>
+    `;
+    cartContainer.appendChild(itemDiv);
+    total += Number(item.price) * Number(item.quantity);
+    totalQuantity += Number(item.quantity);
+  });
+
+  totalElement.textContent = '總計：$' + total.toLocaleString();
+
+  if (quantityElement) {
+    quantityElement.textContent = '商品數量：' + totalQuantity;
+  }
+
+  // 同時更新右上購物車小徽章數量（若有的話）
+  const cartCount = document.getElementById('cart-count');
+  if (cartCount) cartCount.textContent = totalQuantity;
+}
 
   // 加入商品函式（可從其他頁面調用）
   window.addToCart = function (product) {
