@@ -1,27 +1,201 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>聯絡我們 | 祥贊建材</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>聯絡我們 | 祥贊建材</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f9f9f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #1a2e55;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .navbar a {
+      color: #d6c68a;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #b8860b;
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 3rem auto 6rem;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(26,46,85,0.1);
+    }
+    h1 {
+      color: #1a2e55;
+      font-weight: 900;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: 'Noto Sans TC', sans-serif;
+      resize: vertical;
+      margin-bottom: 1.5rem;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #1a2e55;
+      outline: none;
+    }
+    .button {
+      display: block;
+      width: 100%;
+      background-color: #1a2e55;
+      color: #d6c68a;
+      border: none;
+      padding: 0.9rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #b8860b;
+      color: #1a2e55;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      border-top: 1px solid #ddd;
+      background-color: #f3f3f3;
+    }
+    /* 錯誤提示 */
+    .error-message {
+      color: #d9534f;
+      font-size: 0.9rem;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+    .success-message {
+      text-align: center;
+      color: #2a9d8f;
+      font-weight: 700;
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html">首頁</a>
-        <a href="products.html">商品</a>
-        <a href="contact.html">聯絡我們</a>
-        <a href="checkout.html">結帳</a>
-    </div>
-    <div class="container">
-        <h1>聯絡我們</h1>
-        <form>
-            <label>姓名：<input type="text" name="name"></label><br><br>
-            <label>Email：<input type="email" name="email"></label><br><br>
-            <label>訊息內容：<br><textarea name="message" rows="5" cols="30"></textarea></label><br><br>
-            <button class="button" type="submit">送出</button>
-        </form>
-    </div>
-    <div class="footer">祥贊建材批發有限公司 統編83216499</div>
+  <div class="navbar">
+    <a href="index.html">首頁</a>
+    <a href="products.html">商品</a>
+    <a href="contact.html">聯絡我們</a>
+    <a href="checkout.html">結帳</a>
+  </div>
+
+  <div class="container">
+    <h1>聯絡我們</h1>
+    <form id="contactForm" novalidate>
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" />
+      <div class="error-message" id="nameError">請輸入姓名</div>
+
+      <label for="email">Email：</label>
+      <input type="email" id="email" name="email" />
+      <div class="error-message" id="emailError">請輸入有效的 Email</div>
+
+      <label for="message">訊息內容：</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+      <div class="error-message" id="messageError">請輸入訊息內容</div>
+
+      <button class="button" type="submit">送出</button>
+    </form>
+    <div class="success-message" id="successMessage">感謝您的留言！我們會儘快與您聯絡。</div>
+  </div>
+
+  <div class="footer">祥贊建材批發有限公司 統編83216499</div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('successMessage');
+
+    function validateEmail(email) {
+      // 簡易Email格式驗證
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // 清除前次錯誤提示
+      nameError.style.display = 'none';
+      emailError.style.display = 'none';
+      messageError.style.display = 'none';
+      successMessage.style.display = 'none';
+
+      let valid = true;
+
+      if (nameInput.value.trim() === '') {
+        nameError.style.display = 'block';
+        valid = false;
+      }
+
+      if (!validateEmail(emailInput.value.trim())) {
+        emailError.style.display = 'block';
+        valid = false;
+      }
+
+      if (messageInput.value.trim() === '') {
+        messageError.style.display = 'block';
+        valid = false;
+      }
+
+      if (valid) {
+        // 模擬送出成功，實務可改成 AJAX 呼叫 API
+        successMessage.style.display = 'block';
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>
