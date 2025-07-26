@@ -247,13 +247,13 @@
         const container = document.getElementById("productDetail");
         if (found) {
           container.innerHTML = `
-           // <img src="${found.img}" alt="${found.name}" onerror="this.src='assets/img/鋁梯.jpg'" />
-            <img src="${found.img || 'assets/img/default.jpg'}" alt="${found.name}" />
-      
-            <h2>${found.name}</h2>
-            <p>價格：<strong>$${found.price}</strong></p>
-            <button class="add-to-cart" data-name="${found.name}" data-price="${found.price}" data-id="${found.id}">加入購物車</button>
-          `;
+        
+  <img src="${found.img || 'assets/img/default.jpg'}" alt="${found.name}" onerror="this.onerror=null; this.src='assets/img/default.jpg';" />
+  <h2>${found.name}</h2>
+  <p>價格：<strong>$${found.price}</strong></p>
+  <button class="add-to-cart" data-name="${found.name}" data-price="${found.price}" data-id="${found.id}">加入購物車</button>
+`;
+        
         } else {
           container.innerHTML = "<h2>找不到此商品</h2>";
         }
