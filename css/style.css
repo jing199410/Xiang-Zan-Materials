@@ -6,6 +6,18 @@
   padding: 0;
 }*/
 
+header {
+  position: relative;
+  background-image: url('assets/img/building-materials-bg.jpg'); /* 請換成你素材的路徑 */
+  background-size: cover; /* 讓圖片覆蓋整個 header */
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white; /* 文字顏色改成白色較有對比 */
+  padding: 1.5rem 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3); /* 可選，讓文字更好讀 */
+  z-index: 10;
+}
+
 body {
   background: url('assets/bg/concrete-texture.jpg') no-repeat center center fixed;
   background-size: cover;
