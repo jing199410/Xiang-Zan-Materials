@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,10 +5,110 @@
   <title>結帳頁 | 祥贊建材</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #444;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2em auto;
+      background-color: white;
+      padding: 2em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+    }
+
+    #cart-items p {
+      background-color: #f1f1f1;
+      padding: 1em;
+      border-radius: 6px;
+      margin-bottom: 0.8em;
+    }
+
     .qty-btn {
       padding: 0.2em 0.6em;
       margin: 0 0.2em;
       font-size: 1em;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .qty-btn:hover {
+      background-color: #0056b3;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6em;
+      margin-top: 0.4em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .button {
+      margin-top: 1.5em;
+      padding: 0.8em 1.5em;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .button:hover {
+      background-color: #218838;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #eee;
+      margin-top: 2em;
+      font-size: 0.9em;
+    }
+
+    #debug-cart {
+      background: #f9f2f4;
+      border: 1px solid #ccc;
+      padding: 1em;
+      margin-top: 2em;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #d63384;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -20,27 +119,40 @@
     <a href="contact.html">聯絡我們</a>
     <a href="checkout.html">結帳</a>
   </div>
+
   <div class="container">
     <h1>結帳資訊</h1>
 
     <h2>購物車明細</h2>
     <div id="cart-items"></div>
     <p id="cart-total">總計：$0</p>
+
     <hr>
 
     <form id="checkout-form">
-      <label>姓名：<input type="text" name="name" required></label><br><br>
-      <label>Email：<input type="email" name="email" required></label><br><br>
-      <label>送貨地址：<input type="text" name="address" required></label><br><br>
+      <label>姓名：
+        <input type="text" name="name" required>
+      </label>
+      <label>Email：
+        <input type="email" name="email" required>
+      </label>
+      <label>送貨地址：
+        <input type="text" name="address" required>
+      </label>
       <button class="button" type="submit">提交訂單</button>
     </form>
+
+    <h2>🛠 Cart Debug 視窗（即時）</h2>
+    <div id="debug-cart">載入中...</div>
   </div>
+
   <div class="footer">祥贊建材批發有限公司 統編83216499</div>
 
   <script>
     function renderCart() {
       const cartContainer = document.getElementById('cart-items');
       const totalElement = document.getElementById('cart-total');
+      const debugCart = document.getElementById('debug-cart');
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
       cartContainer.innerHTML = '';
       let total = 0;
@@ -62,6 +174,9 @@
       });
 
       totalElement.textContent = "總計：$" + total;
+
+      // 同步更新 Debug 區塊
+      debugCart.textContent = JSON.stringify(cart, null, 2);
     }
 
     function changeQty(index, delta) {
