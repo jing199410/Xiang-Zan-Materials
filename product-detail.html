@@ -92,6 +92,128 @@
         font-size: 1em;
       }
     }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #e6ecf2);
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #2a4e96;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar .cart-icon {
+      position: relative;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #2a4e96;
+    }
+
+    .cart-item {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+    .cart-item strong {
+      font-size: 1.1rem;
+    }
+
+    .remove-btn {
+      background: #d9534f;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .remove-btn:hover {
+      background: #c9302c;
+    }
+
+    #cart-total {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.75rem 1.5rem;
+      background-color: #2a4e96;
+      color: white;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #183b73;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
