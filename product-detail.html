@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -6,25 +5,92 @@
   <title>商品詳情 | 祥贊建材</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #2f2f2f;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #ccc;
+    }
+
     .detail-container {
-      max-width: 600px;
-      margin: auto;
-      padding: 1em;
+      max-width: 900px;
+      margin: 3em auto;
+      padding: 1.5em;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-    .detail-card {
-      border: 1px solid #ccc;
-      padding: 1em;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    .detail-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1em;
     }
+
     .detail-card h2 {
-      margin-top: 0;
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+      color: #222;
     }
+
+    .detail-card p {
+      font-size: 1.2em;
+      margin-bottom: 1.5em;
+      color: #666;
+    }
+
+    .add-to-cart {
+      background: linear-gradient(to right, #8b5e3c, #b79b70);
+      color: #fff;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+      background: linear-gradient(to right, #a06b45, #d0b98c);
+    }
+
     .back-link {
       display: inline-block;
-      margin-top: 1em;
+      margin-top: 1.5em;
       text-decoration: none;
       color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .detail-container {
+        margin: 1em;
+        padding: 1em;
+      }
+
+      .detail-card h2 {
+        font-size: 1.5em;
+      }
+
+      .detail-card p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
@@ -35,6 +101,7 @@
     <a href="contact.html">聯絡我們</a>
     <a href="checkout.html">結帳</a>
   </div>
+
   <div class="container detail-container">
     <div class="detail-card" id="productDetail">
       <h2>載入中...</h2>
@@ -45,7 +112,7 @@
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const productName = decodeURIComponent(urlParams.get('id'));
+    const productId = decodeURIComponent(urlParams.get('id'));
 
     fetch("products.json")
       .then(res => res.json())
@@ -58,10 +125,10 @@
         const container = document.getElementById("productDetail");
         if (found) {
           container.innerHTML = `
-          <img src="${found.img}" alt="${found.name}" style="max-width:100%;border-radius:8px;" onerror="this.src='assets/img/鋁梯.jpg'"/>
+            <img src="${found.img}" alt="${found.name}" onerror="this.src='assets/img/鋁梯.jpg'" />
             <h2>${found.name}</h2>
-            <p>價格：$${found.price}</p>
-            <button class="button add-to-cart" data-name="${found.name}" data-price="${found.price}" data-id="${found.id}">加入購物車</button>
+            <p>價格：<strong>$${found.price}</strong></p>
+            <button class="add-to-cart" data-name="${found.name}" data-price="${found.price}" data-id="${found.id}">加入購物車</button>
           `;
         } else {
           container.innerHTML = "<h2>找不到此商品</h2>";
@@ -70,6 +137,7 @@
 
     document.addEventListener("click", function (e) {
       if (e.target.classList.contains("add-to-cart")) {
+        const id = e.target.dataset.id;
         const name = e.target.dataset.name;
         const price = parseInt(e.target.dataset.price);
         let cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -77,7 +145,7 @@
         if (existing) {
           existing.quantity += 1;
         } else {
-          cart.push({ id, price, quantity: 1 });
+          cart.push({ id, name, price, quantity: 1 });
         }
         localStorage.setItem("cart", JSON.stringify(cart));
         alert("已加入購物車！");
