@@ -4,28 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>關於我們 | 祥贊建材批發有限公司</title>
-  <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+
   <style>
-    /* 輪播區塊樣式 */
-    .about-carousel {
-      width: 90%;
-      max-width: 900px;
-      margin: 40px auto 80px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    :root {
+      --primary: #2f5d62;
+      --accent: #a7c957;
+      --bg: #f7f7f7;
+      --text: #222;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: var(--bg);
+      margin: 0;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1.2em 0;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 0.5em;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main.about-page {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .about-carousel {
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto 60px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
     .about-carousel .swiper-slide img {
       width: 100%;
-      display: block;
       height: auto;
       object-fit: cover;
+      display: block;
     }
-    /* 小螢幕文字微調 */
+
+    .about-intro {
+      background-color: white;
+      border-radius: 12px;
+      padding: 2em;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .about-intro p {
+      margin-bottom: 1.2em;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      margin-top: 3em;
+      background-color: #ddd;
+      font-size: 0.9em;
+      color: #333;
+    }
+
     @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6em;
+      }
+
+      .about-intro {
+        padding: 1.5em;
+      }
+
       .about-intro p {
         font-size: 0.95rem;
       }
@@ -42,9 +126,10 @@
       <a href="contact.html">聯絡我們</a>
     </nav>
   </header>
+
   <main class="about-page">
 
-     <!-- 輪播照片區塊 -->
+    <!-- 輪播區塊 -->
     <section class="about-carousel" data-aos="fade-up" data-aos-delay="400">
       <div class="swiper">
         <div class="swiper-wrapper">
@@ -52,16 +137,12 @@
           <div class="swiper-slide"><img src="assets/img/brand-interior.jpg" alt="施工現場照片2"></div>
           <div class="swiper-slide"><img src="assets/img/living-room.jpg" alt="團隊合照照片3"></div>
         </div>
-        <!-- 分頁 -->
         <div class="swiper-pagination"></div>
-        <!-- 箭頭 -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
     </section>
-    <!--<div class="about-image" data-aos="fade-up">
-      <img src="assets/img/living-room.jpg" alt="祥贊建材品牌形象" style="width:100%;border-radius:12px;">
-    </div>-->
+
     <section class="about-intro" data-aos="fade-up" data-aos-delay="200">
       <h2>公司簡介</h2>
       <p>
@@ -76,13 +157,13 @@
       </p>
     </section>
 
-   
   </main>
+
   <footer>
     <p>© 2025 祥贊建材批發有限公司 統編83216499</p>
   </footer>
 
-  <!-- AOS 與 Swiper JS -->
+  <!-- AOS & Swiper JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
   <script>
