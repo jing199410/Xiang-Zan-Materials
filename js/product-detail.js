@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 // 加入購物車
-function addToCart(id) {
+/*function addToCart(id) {
   const qty = parseInt(document.getElementById("qty").value, 10) || 1;
   const daysInput = document.getElementById("rental-days");
   const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
@@ -121,3 +121,71 @@ function addToCart(id) {
   localStorage.setItem("cart_B", JSON.stringify(cart));
   alert("已加入購物車！");
 }
+  function updateCartDisplay() {
+}*/
+  function updateCartDisplay() {
+  const cartContainer = document.getElementById('cart-items');
+  const totalElement = document.getElementById('cart-total');
+  //const quantityElement = document.getElementById('cart-quantity'); // 確認有此元素
+
+  if (!cartContainer || !totalElement) return;
+
+  cartContainer.innerHTML = '';
+  let total = 0;
+  let totalQuantity = 0;
+
+  if (cart.length === 0) {
+    cartContainer.innerHTML = '<p>購物車是空的</p>';
+  }
+
+  cart.forEach((item, index) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+    itemDiv.innerHTML = `
+      <img src="${item.img || 'assets/img/default.jpg'}" alt="${item.name}" />
+      <div class="cart-item-info">
+        <h3>${item.name}</h3>
+        <p>$${Number(item.price)} × ${Number(item.quantity)}</p>
+      </div>
+      <button data-index="${index}" class="remove-btn">✕</button>
+    `;
+    cartContainer.appendChild(itemDiv);
+    total += Number(item.price) * Number(item.quantity);
+    totalQuantity += Number(item.quantity);
+  });
+
+  totalElement.textContent = '總計：$' + total.toLocaleString();
+
+  if (quantityElement) {
+    quantityElement.textContent = '商品數量：' + totalQuantity;
+  }
+
+  // 同時更新右上購物車小徽章數量（若有的話）
+  const cartCount = document.getElementById('cart-count');
+  if (cartCount) cartCount.textContent = totalQuantity;
+}
+
+ // 加入商品函式（可從其他頁面調用）
+  window.addToCart = function (product) {
+    const existing = cart.find(item => item.id === product.id);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ ...product, quantity: 1 });
+    }
+    saveCart();
+    updateCartDisplay();
+  };
+
+
+  // 綁定 .add-to-cart 按鈕（用於商品頁）
+  const buttons = document.querySelectorAll('.add-to-cart');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.id;
+      const name = btn.dataset.name;
+      const price = parseInt(btn.dataset.price);
+      const img = btn.dataset.img;
+      window.addToCart({ id, name, price, img });
+    });
+  });
