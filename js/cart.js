@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const cart = JSON.parse(localStorage.getItem('cart_B')) || [];
 
   function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('cart_B', JSON.stringify(cart));
   }
 
 /*  function updateCartDisplay() {
