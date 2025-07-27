@@ -195,10 +195,10 @@
   },
   {
     "id": "p028",
-    "name": "【超固】五金配件 No.003",
+    "name": "平板鐵件 補強板",
     "price": 390,
     "category": "五金",
-     "img": "assets/img/五金配件.jpg"
+     "img": "assets/img/平板鐵件補強板.webp"
   },
   {
     "id": "p029",
@@ -230,7 +230,7 @@
   },
   {
      "id": "p033",
-    "name": "平板鐵件（補強板）",
+    "name": "平板鐵件",
     "price": 540,
     "category": "五金",
      "img": "assets/img/平板鐵件.jpeg"
