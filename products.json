@@ -384,7 +384,7 @@
     "name": "【工程租借】機具設備編號 001",
     "price": 3300,
     "category": "器材租借",
-     "img": "assets/img/鷹架組(1).jpg",
+     "img": "assets/img/鷹架組1.jpg",
      "description": "鷹架，高品質，適合商業及家庭使用。",
       "rental": true
     
@@ -393,7 +393,7 @@
     "name": "【工程租借】機具設備編號 002",
     "price": 3600,
     "category": "器材租借",
-    "img": "assets/img/assets/img/鷹架組(2).jpg",
+    "img": "assets/img/assets/img/鷹架組2.jpg",
      "description": "鷹架，高品質，適合商業及家庭使用。",
     "rental": true
   },
