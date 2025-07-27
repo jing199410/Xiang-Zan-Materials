@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const images = product.img?.length ? product.img : [product.img];
+    const images = product.images?.length ? product.images : [product.image];
     const imageGallery = images.map((img, idx) =>
-      `<a href="${img}" class="glightbox" data-gallery="product">
+      <a href="${img}" class="glightbox" data-gallery="product">
         <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
-      </a>`
+      </a>
     ).join("");
 
-    container.innerHTML = `
+    container.innerHTML = 
       <div class="detail-box">
         <div class="detail-gallery">
           ${imageGallery}
@@ -49,12 +49,12 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
 
           <div class="detail-actions">
-            <input type="number" id="quantity" min="1" value="1"/>
+            <input type="number" id="qty" min="1" value="1"/>
             <button onclick="addToCart('${product.id}')">加入購物車</button>
           </div>
         </div>
       </div>
-    `;
+    ;
 
     // 啟動圖片燈箱
     if (typeof GLightbox === "function") {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const updateTotal = () => {
         const days = parseInt(daysInput.value, 10) || 1;
-        totalDisplay.textContent = `總計：NT$${(pricePerDay * days).toLocaleString()}`;
+        totalDisplay.textContent = 總計：NT$${(pricePerDay * days).toLocaleString()};
       };
       daysInput.addEventListener("input", updateTotal);
       updateTotal();
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (product.specs) {
       const table = document.getElementById("spec-table");
       table.innerHTML = Object.entries(product.specs)
-        .map(([key, val]) => `<tr><th>${key}</th><td>${val}</td></tr>`)
+        .map(([key, val]) => <tr><th>${key}</th><td>${val}</td></tr>)
         .join("");
     }
 
@@ -94,33 +94,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // 加入購物車
 function addToCart(id) {
-  const quantity = parseInt(document.getElementById("quantity").value, 10) || 1;
+  const qty = parseInt(document.getElementById("qty").value, 10) || 1;
   const daysInput = document.getElementById("rental-days");
   const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
 
   const cart = JSON.parse(localStorage.getItem("cart_B")) || [];
+  const existing = cart.find(item => item.id === id && item.days === days);
 
-  fetch("products.json")
-    .then(res => res.json())
-    .then(products => {
-      const product = products.find(p => p.id === id);
-      if (!product) return alert("找不到商品");
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    cart.push({ id, qty, days });
+  }
 
-      const existing = cart.find(item => item.id === id && item.days === days);
-      if (existing) {
-        existing.quantity += quantity;
-      } else {
-        cart.push({
-          id: product.id,
-          name: product.name,
-          price: product.rental && days ? product.price * days : product.price,
-          img: (product.img?.[0] || product.img),
-          quantity: quantity,
-          days: days || null
-        });
-      }
-
-      localStorage.setItem("cart_B", JSON.stringify(cart));
-      alert("已加入購物車！");
-    });
+  localStorage.setItem("cart_B", JSON.stringify(cart));
+  alert("已加入購物車！");
 }
