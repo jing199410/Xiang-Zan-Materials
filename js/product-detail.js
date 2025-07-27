@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const images = product.images?.length ? product.images : [product.image];
     const imageGallery = images.map((img, idx) =>
       `<a href="${img}" class="glightbox" data-gallery="product">
-        <img src="${img}" alt="${product.name} ${idx + 1}" class="detail-img" />
+        <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
       </a>`
     ).join("");
 
