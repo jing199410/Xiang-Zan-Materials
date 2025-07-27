@@ -509,9 +509,10 @@
   },
   {
      "id": "p071",
-    "name": "【工程租借】機具設備編號 006",
+    "name": "【工程租借】剪草機",
     "price": 4800,
     "category": "器材租借",
+    "img": "assets/img/剪草機.jpg",
     "rental": true
   },
   {
