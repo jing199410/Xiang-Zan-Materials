@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const images = product.images?.length ? product.images : [product.image];
+    const images = product.img?.length ? product.img : [product.img];
     const imageGallery = images.map((img, idx) =>
       `<a href="${img}" class="glightbox" data-gallery="product">
         <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
@@ -99,14 +99,29 @@ function addToCart(id) {
   const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
 
   const cart = JSON.parse(localStorage.getItem("cart_B")) || [];
-  const existing = cart.find(item => item.id === id && item.days === days);
 
-  if (existing) {
-    existing.qty += qty;
-  } else {
-    cart.push({ id, qty, days });
-  }
+  // 從 products.json 中取得當前商品資訊
+  fetch("products.json")
+    .then(res => res.json())
+    .then(products => {
+      const product = products.find(p => p.id === id);
+      if (!product) return alert("找不到商品");
 
-  localStorage.setItem("cart_B", JSON.stringify(cart));
-  alert("已加入購物車！");
+      const existing = cart.find(item => item.id === id && item.days === days);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        cart.push({
+          id: product.id,
+          name: product.name,
+          price: product.rental && days ? product.price * days : product.price,
+          img: (product.img?.[0] || product.img),
+          quantity: qty,
+          days: days || null
+        });
+      }
+
+      localStorage.setItem("cart_B", JSON.stringify(cart));
+      alert("已加入購物車！");
+    });
 }
