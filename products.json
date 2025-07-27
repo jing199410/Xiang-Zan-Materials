@@ -125,7 +125,8 @@
     "name": "【台泥】水泥 50kg／袋",
     "price": 350,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/tcc-cement-50kg.jpg",
+     "description": "高品質，適合商業及家庭使用。"
   },
   {
     "name": "【旭鋼】不鏽鋼螺絲 M6 x 40mm（100入）",
@@ -383,18 +384,25 @@
     "name": "【工程租借】機具設備編號 001",
     "price": 3300,
     "category": "器材租借",
-    "rental": true
+     "img": "assets/img/鷹架組(1).jpg",
+     "description": "鷹架，高品質，適合商業及家庭使用。",
+      "rental": true
+    
   },
   {
     "name": "【工程租借】機具設備編號 002",
     "price": 3600,
     "category": "器材租借",
+    "img": "assets/img/assets/img/鷹架組(2).jpg",
+     "description": "鷹架，高品質，適合商業及家庭使用。",
     "rental": true
   },
   {
     "name": "【工程租借】機具設備編號 003",
     "price": 3900,
     "category": "器材租借",
+     "img": "assets/img/assets/img/鋁梯.jpg",
+     "description": "鋁梯，高品質，適合商業及家庭使用。",
     "rental": true
   },
   {
