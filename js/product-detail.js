@@ -98,7 +98,7 @@ function addToCart(id) {
   const daysInput = document.getElementById("rental-days");
   const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
 
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cart = JSON.parse(localStorage.getItem("cart_B")) || [];
   const existing = cart.find(item => item.id === id && item.days === days);
 
   if (existing) {
@@ -107,6 +107,6 @@ function addToCart(id) {
     cart.push({ id, qty, days });
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart_B", JSON.stringify(cart));
   alert("已加入購物車！");
 }
