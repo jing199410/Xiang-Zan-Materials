@@ -517,30 +517,34 @@
   },
   {
      "id": "p072",
-    "name": "【工程租借】機具設備編號 007",
-    "price": 5100,
+    "name": "【工程租借】伸縮臂高空作業車（12m–18m）",
+    "price": 12000,
     "category": "器材租借",
+    "img": "assets/img/伸縮臂高空作業車12-18m.jpg",
     "rental": true
   },
   {
      "id": "p073",
-    "name": "【工程租借】機具設備編號 008",
-    "price": 5400,
+    "name": "【工程租借】地坪研磨機（含吸塵系統）",
+    "price": 9000,
     "category": "器材租借",
+    "img": "assets/img/地坪研磨機（含吸塵系統） .jpeg",
     "rental": true
   },
   {
      "id": "p074",
-    "name": "【工程租借】機具設備編號 009",
+    "name": "【工程租借】塔式升降平台",
     "price": 5700,
     "category": "器材租借",
+    "img": "assets/img/塔式升降平台.png",
     "rental": true
   },
   {
      "id": "p075",
-    "name": "【工程租借】機具設備編號 010",
+    "name": "【工程租借】大型空壓機（配打釘／噴漆）",
     "price": 6000,
     "category": "器材租借",
+    "img": "assets/img/大型空壓機.jpg",
     "rental": true
   }
 ]
