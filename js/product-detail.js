@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // 加入購物車
 function addToCart(id) {
-  const qty = parseInt(document.getElementById("qty").value, 10) || 1;
+  const quantity = parseInt(document.getElementById("quantity").value, 10) || 1;
   const daysInput = document.getElementById("rental-days");
   const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
 
@@ -109,14 +109,14 @@ function addToCart(id) {
 
       const existing = cart.find(item => item.id === id && item.days === days);
       if (existing) {
-        existing.qty += qty;
+        existing.quantity += quantity;
       } else {
         cart.push({
           id: product.id,
           name: product.name,
           price: product.rental && days ? product.price * days : product.price,
           img: (product.img?.[0] || product.img),
-          quantity: qty,
+          quantity: quantity,
           days: days || null
         });
       }
