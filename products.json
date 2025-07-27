@@ -453,6 +453,9 @@
     "price": 20000,
     "category": "器材租借",
       "img": "assets/img/山貓.bmp",
+     "specs": {
+      "尺寸": "1噸"
+    },
     "rental": true
   },
   {
