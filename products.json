@@ -476,14 +476,15 @@
     "price": 7680,
     "category": "器材租借",
      "img": "assets/img/軍刀鋸組.jpg",
-     "description": "鋁梯，高品質，適合商業及家庭使用。",
+     "description": "高品質，適合商業及家庭使用。",
     "rental": true
   },
   {
      "id": "p069",
-    "name": "【工程租借】機具設備編號 004",
+    "name": "【工程租借】圓鋸機組",
     "price": 4200,
     "category": "器材租借",
+    "img": "assets/img/BOSCH圓鋸機組.jpg",
     "rental": true
   },
   {
