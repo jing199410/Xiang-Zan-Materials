@@ -4,7 +4,7 @@
     "name": "卡扣地板 灰橡木紋 5mm × 1220mm（每坪）",
     "price": 2000,
     "category": "建材",
-     "img": "assets/img/仿木紋.jpg",
+     "img": ["assets/img/仿木紋.jpg"],
      "description": "高品質灰橡木紋卡扣地板，厚度5mm，尺寸1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
