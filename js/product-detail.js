@@ -17,13 +17,22 @@ document.addEventListener("DOMContentLoaded", async () => {
       container.innerHTML = "<p>找不到該商品。</p>";
       return;
     }
+    let images = [];
 
-    const images = product.images?.length ? product.images : [product.image];
-    const imageGallery = images.map((img, idx) =>
-      <a href="${img}" class="glightbox" data-gallery="product">
-        <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
-      </a>
-    ).join("");
+if (Array.isArray(product.img)) {
+  images = product.img;
+} else if (typeof product.img === "string" && product.img.trim() !== "") {
+  images = [product.img];
+} else {
+  images = ["assets/img/placeholder.jpg"]; // 提供一張預設圖片
+}
+
+const imageGallery = images.map((img, idx) =>
+  `<a href="${img}" class="glightbox" data-gallery="product">
+    <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
+  </a>`
+).join("");
+
 
     container.innerHTML = 
       <div class="detail-box">
