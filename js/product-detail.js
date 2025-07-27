@@ -10,10 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const res = await fetch('/Xiang-Zan-Materials/products.json');
-   
     const products = await res.json();
-   
-    console.log(products);
     const product = products.find(p => p.id === productId);
 
     if (!product) {
@@ -27,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else if (typeof product.img === "string" && product.img.trim() !== "") {
       images = [product.img];
     } else {
-      images = ["assets/img/placeholder.jpg"]; // 預設圖片
+      images = ["assets/img/placeholder.jpg"];
     }
 
     const imageGallery = images.map((img, idx) =>
@@ -61,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
           <div class="detail-actions">
             <input type="number" id="qty" min="1" value="1"/>
-            <button onclick="addToCart('${product.id}')">加入購物車</button>
+            <button id="add-to-cart-btn">加入購物車</button>
           </div>
         </div>
       </div>
@@ -97,29 +94,42 @@ document.addEventListener("DOMContentLoaded", async () => {
         .join("");
     }
 
+    // 加入購物車事件綁定
+    document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+      addToCart(product);
+    });
+
   } catch (error) {
     console.error("商品資料載入失敗：", error);
     container.innerHTML = "<p>載入商品資料時發生錯誤。</p>";
   }
 });
 
-// 加入購物車
-ｆunction addToCart(id) {
-  const qty = parseInt(document.getElementById("qty").value, 10) || 1;
-  const daysInput = document.getElementById("rental-days");
-  const days = daysInput ? parseInt(daysInput.value, 10) : undefined;
+function addToCart(product) {
+  const qtyInput = document.getElementById("qty");
+  const rentalDaysInput = document.getElementById("rental-days");
+
+  const quantity = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+  const days = rentalDaysInput ? parseInt(rentalDaysInput.value, 10) || 1 : undefined;
 
   const cart = JSON.parse(localStorage.getItem("cart_B")) || [];
-  const existing = cart.find(item => item.id === id && item.days === days);
+
+  // 找出同商品且租借天數相同的項目
+  const existing = cart.find(item => item.id === product.id && item.days === days);
 
   if (existing) {
-    existing.qty += qty;
+    existing.quantity += quantity;
   } else {
-    cart.push({ id, qty, days });
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      img: Array.isArray(product.img) ? product.img[0] : product.img || 'assets/img/placeholder.jpg',
+      quantity,
+      days
+    });
   }
 
   localStorage.setItem("cart_B", JSON.stringify(cart));
   alert("已加入購物車！");
-}
-  function updateCartDisplay() {
 }
