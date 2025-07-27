@@ -421,14 +421,14 @@
   },
   {
      "id": "p062",
-    "name": "【日立】混凝土攪拌機 220V 500L",
-    "price": 5000,
+    "name": "混凝土攪拌機 220V 500L",
+    "price": 9000,
     "category": "器材租借",
     "rental": true
   },
   {
      "id": "p063",
-    "name": "【HILTI】雷射水平儀 綠光 360度",
+    "name": "雷射水平儀 綠光 360度",
     "price": 800,
     "category": "器材租借",
       "img": "assets/img/TP00005730002966_O.webp",
@@ -436,8 +436,8 @@
   },
   {
      "id": "p064",
-    "name": "【山貓】小型挖土機 1噸",
-    "price": 8000,
+    "name": "小型挖土機 1噸",
+    "price": 28000,
     "category": "器材租借",
       "img": "assets/img/山貓.bmp",
     "rental": true
