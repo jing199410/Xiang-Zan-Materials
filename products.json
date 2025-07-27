@@ -335,15 +335,15 @@
   },
   {
      "id": "p048",
-    "name": "【東工】手動鐵工剪 12吋",
+    "name": "手動鐵工剪 12吋",
     "price": 480,
     "category": "工具",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/手動鐵工剪12吋.webp"
   },
   {
      "id": "p049",
     "name": "【BOSCH】震動電鑽 GSB550",
-    "price": 2900,
+    "price": 8900,
     "category": "工具",
     "img": "assets/img/BOSCH震動電鑽.jpg"
   },
@@ -351,7 +351,8 @@
      "id": "p050",
     "name": "【得力】多功能榔頭 16oz",
     "price": 280,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/多功能榔頭16oz.webp"
   },
   {
      "id": "p051",
