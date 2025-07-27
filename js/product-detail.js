@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("id");
-  const container = document.getElementById("product-container");
+ // const container = document.getElementById("product-container");
+  const container = document.getElementById("productDetail");
 
   if (!productId) {
     container.innerHTML = "<p>無效的商品連結。</p>";
