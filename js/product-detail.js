@@ -188,4 +188,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const img = btn.dataset.img;
       window.addToCart({ id, name, price, img });
     });
+    // 初始顯示
+  updateCartDisplay();
   });
