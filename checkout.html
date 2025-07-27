@@ -143,8 +143,8 @@
       <button class="button" type="submit">提交訂單</button>
     </form>
 
-    <h2>🛠 Cart Debug 視窗（即時）</h2>
-    <div id="debug-cart">載入中...</div>
+    <!--<h2>🛠 Cart Debug 視窗（即時）</h2>
+    <div id="debug-cart">載入中...</div>-->
   </div>
 
   <div class="footer">祥贊建材批發有限公司 統編83216499</div>
@@ -177,7 +177,7 @@
       totalElement.textContent = "總計：$" + total;
 
       // 同步更新 Debug 區塊
-      debugCart.textContent = JSON.stringify(cart, null, 2);
+     // debugCart.textContent = JSON.stringify(cart, null, 2);
     }
 
     function changeQty(index, delta) {
