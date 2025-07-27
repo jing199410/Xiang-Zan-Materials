@@ -379,49 +379,57 @@
      "id": "p054",
     "name": "一字起子 絕緣型",
     "price": 190,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/一字起子.jpg"
   },
   {
      "id": "p055",
     "name": "十字起子 絕緣型",
     "price": 190,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/十字起子.jpg"
   },
   {
      "id": "p056",
     "name": "老虎鉗 6吋",
     "price": 290,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/老虎鉗6吋.png"
   },
   {
      "id": "p057",
     "name": "尖嘴鉗 6吋",
     "price": 280,
-    "category": "工具"
+    "category": "工具",
+        "img": "assets/img/尖嘴鉗.webp"
   },
   {
     "id": "p058",
     "name": "捲尺 5M 自動回彈",
     "price": 300,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/捲尺.webp"
   },
   {
     "id": "p059",
     "name": "電工刀（折疊式）",
-    "price": 250,
-    "category": "工具"
+    "price": 1750,
+    "category": "工具",
+    "img": "assets/img/電工刀.jpg"
   },
   {
      "id": "p060",
     "name": "水平尺 30cm",
     "price": 200,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/水平尺.webp"
   },
   {
      "id": "p061",
     "name": "矽膠槍（膠槍）",
     "price": 150,
-    "category": "工具"
+    "category": "工具",
+    "img": "assets/img/矽膠槍.webp"
   },
   {
      "id": "p062",
