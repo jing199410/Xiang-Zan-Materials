@@ -424,7 +424,7 @@
     "name": "混凝土攪拌機 220V 500L",
     "price": 9000,
     "category": "器材租借",
-    "img": "assets/img//混凝土攪拌機220V.avif",
+    "img": "assets/img/混凝土攪拌機220V.avif",
     "rental": true
   },
   {
@@ -472,10 +472,10 @@
   },
   {
      "id": "p068",
-    "name": "【工程租借】機具設備編號 003",
-    "price": 3900,
+    "name": "【工程租借】軍刀鋸組",
+    "price": 7680,
     "category": "器材租借",
-     "img": "assets/img/鋁梯.jpg",
+     "img": "assets/img/軍刀鋸組.jpg",
      "description": "鋁梯，高品質，適合商業及家庭使用。",
     "rental": true
   },
