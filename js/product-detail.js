@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const res = await fetch('./products.json');
-    const text = await res.text();
-    console.log(text);  // 檢查拿到的資料是不是 JSON
+    //const text = await res.text();
+    //console.log(text);  // 檢查拿到的資料是不是 JSON
     
     const products = JSON.parse(text);
     const product = products.find(p => p.id === productId);
