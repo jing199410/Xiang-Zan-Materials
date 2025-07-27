@@ -40,35 +40,35 @@
   },
   {
      "id": "p006",
-    "name": "【永大】卡扣地板 原橡木 5mm × 1220mm（每坪）",
+    "name": "卡扣地板 原橡木 5mm × 1220mm（每坪）",
     "price": 3500,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
      "id": "p007",
-    "name": "【永大】卡扣地板 淺胡桃木 5mm × 1220mm（每坪）",
+    "name": "卡扣地板 淺胡桃木 5mm × 1220mm（每坪）",
     "price": 3800,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
      "id": "p008",
-    "name": "【永大】卡扣地板 仿竹紋 5mm × 1220mm（每坪）",
+    "name": "卡扣地板 仿竹紋 5mm × 1220mm（每坪）",
     "price": 4100,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
      "id": "p009",
-    "name": "【永大】卡扣地板 自然木紋 5mm × 1220mm（每坪）",
+    "name": "卡扣地板 自然木紋 5mm × 1220mm（每坪）",
     "price": 4400,
     "category": "建材",
     "img": "assets/img/仿木紋.jpg"
   },
   {
      "id": "p010",
-    "name": "【永大】卡扣地板 咖啡橡木 5mm × 1220mm（每坪）",
+    "name": "卡扣地板 咖啡橡木 5mm × 1220mm（每坪）",
     "price": 4700,
     "category": "建材",
     "img": "assets/img/仿木紋.jpg"
@@ -356,15 +356,17 @@
   },
   {
      "id": "p051",
-    "name": "【好工人】電動砂輪機 4吋",
-    "price": 1600,
-    "category": "工具"
+    "name": "電動砂輪機 4吋",
+    "price": 21600,
+    "category": "工具",
+    "img": "assets/img/電動砂輪機4吋.webp"
   },
   {
      "id": "p052",
-    "name": "【工匠牌】專業工具 01",
-    "price": 600,
-    "category": "工具"
+    "name": "BOSCH圓鋸機組",
+    "price": 76050,
+    "category": "工具",
+    "img": "assets/img/BOSCH圓鋸機組.jpg"
   },
   {
      "id": "p053",
