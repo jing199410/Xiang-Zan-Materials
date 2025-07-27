@@ -154,7 +154,7 @@
       const cartContainer = document.getElementById('cart-items');
       const totalElement = document.getElementById('cart-total');
       const debugCart = document.getElementById('debug-cart');
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cart = JSON.parse(localStorage.getItem('cart_B')) || [];
       cartContainer.innerHTML = '';
       let total = 0;
 
@@ -181,13 +181,13 @@
     }
 
     function changeQty(index, delta) {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cart = JSON.parse(localStorage.getItem('cart_B')) || [];
       if (cart[index]) {
         cart[index].quantity += delta;
         if (cart[index].quantity <= 0) {
           cart.splice(index, 1);
         }
-        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('cart_B', JSON.stringify(cart));
         renderCart();
       }
     }
