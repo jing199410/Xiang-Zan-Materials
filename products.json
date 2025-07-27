@@ -37,20 +37,20 @@
   {
     "name": "【永大】卡扣地板 原橡木 5mm × 1220mm（每坪）",
     "price": 3500,
-    "category": "建材"
-    ,"img": "assets/img/仿木紋.jpg"
+    "category": "建材",
+     "img": "assets/img/仿木紋.jpg"
   },
   {
     "name": "【永大】卡扣地板 淺胡桃木 5mm × 1220mm（每坪）",
     "price": 3800,
     "category": "建材",
-    "img": "assets/img/仿木紋.jpg"
+     "img": "assets/img/仿木紋.jpg"
   },
   {
     "name": "【永大】卡扣地板 仿竹紋 5mm × 1220mm（每坪）",
     "price": 4100,
     "category": "建材",
-    "img": "assets/img/仿木紋.jpg"
+     "img": "assets/img/仿木紋.jpg"
   },
   {
     "name": "【永大】卡扣地板 自然木紋 5mm × 1220mm（每坪）",
