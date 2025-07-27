@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch("products.json");
+    const res = await fetch("./products.json");
     const products = await res.json();
     const product = products.find(p => p.id === productId);
 
