@@ -8,6 +8,7 @@
      "description": "高品質灰橡木紋卡扣地板，厚度5mm，尺寸1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
+    "id": "p002",
     "name": "【永大】卡扣地板 深胡桃木紋 5mm × 1220mm（每坪）",
     "price": 2300,
     "category": "建材",
@@ -15,6 +16,7 @@
       "description": "高品質深胡桃木紋 5mm × 1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
+     "id": "p003",
     "name": "【永大】卡扣地板 白橡木紋 5mm × 1220mm（每坪）",
     "price": 2600,
     "category": "建材",
@@ -22,6 +24,7 @@
     "description": "高品質白橡木紋 5mm × 1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
+     "id": "p004",
     "name": "【永大】卡扣地板 原木色 5mm × 1220mm（每坪）",
     "price": 2900,
     "category": "建材",
@@ -29,102 +32,119 @@
     "description": "高品質原木色 5mm × 1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
+     "id": "p005",
     "name": "【永大】卡扣地板 石紋灰 5mm × 1220mm（每坪）",
     "price": 3200,
     "category": "建材",
     "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p006",
     "name": "【永大】卡扣地板 原橡木 5mm × 1220mm（每坪）",
     "price": 3500,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p007",
     "name": "【永大】卡扣地板 淺胡桃木 5mm × 1220mm（每坪）",
     "price": 3800,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p008",
     "name": "【永大】卡扣地板 仿竹紋 5mm × 1220mm（每坪）",
     "price": 4100,
     "category": "建材",
      "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p009",
     "name": "【永大】卡扣地板 自然木紋 5mm × 1220mm（每坪）",
     "price": 4400,
     "category": "建材",
     "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p010",
     "name": "【永大】卡扣地板 咖啡橡木 5mm × 1220mm（每坪）",
     "price": 4700,
     "category": "建材",
     "img": "assets/img/仿木紋.jpg"
   },
   {
+     "id": "p011",
     "name": "【久鼎】仿木地貼 胡桃木紋 2mm（每卷15M）",
     "price": 1500,
     "category": "建材",
      "img": "assets/img/地板貼.jpg"
   },
   {
+    "id": "p012",
     "name": "【久鼎】仿木地貼 白橡木紋 2mm（每卷15M）",
     "price": 1750,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+    "id": "p013",
     "name": "【久鼎】仿木地貼 淺灰木紋 2mm（每卷15M）",
     "price": 2000,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+    "id": "p014",
     "name": "【久鼎】仿木地貼 楓木色 2mm（每卷15M）",
     "price": 2250,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p015",
     "name": "【久鼎】仿木地貼 棕木紋 2mm（每卷15M）",
     "price": 2500,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p016",
     "name": "【久鼎】仿木地貼 胡桃棕 2mm（每卷15M）",
     "price": 2750,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p017",
     "name": "【久鼎】仿木地貼 淺橡 2mm（每卷15M）",
     "price": 3000,
     "category": "建材",
    "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p018",
     "name": "【久鼎】仿木地貼 仿櫸木 2mm（每卷15M）",
     "price": 3250,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p019",
     "name": "【久鼎】仿木地貼 漂白松木 2mm（每卷15M）",
     "price": 3500,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p020",
     "name": "【久鼎】仿木地貼 核桃原色 2mm（每卷15M）",
     "price": 3750,
     "category": "建材",
     "img": "assets/img/地板貼.jpg"
   },
   {
+     "id": "p021",
     "name": "【台泥】水泥 50kg／袋",
     "price": 350,
     "category": "建材",
@@ -132,240 +152,282 @@
      "description": "高品質，適合商業及家庭使用。"
   },
   {
+     "id": "p022",
     "name": "【旭鋼】不鏽鋼螺絲 M6 x 40mm（100入）",
     "price": 160,
     "category": "五金",
     "img": "assets/img/不鏽鋼螺絲M6x40mm（100入）.jpg"
   },
   {
+     "id": "p023",
     "name": "【正興】鋁合金角鐵 30x30x2mm（1米）",
     "price": 200,
     "category": "五金",
     "img": "assets/img/頁面裝飾-色卡.jpg"
   },
   {
+    "id": "p024",
     "name": "【力霸】圓弧門鎖 銀色／左開",
     "price": 850,
     "category": "五金",
     "img": "assets/img/圓弧門鎖(銀色）.jpeg"
   },
   {
+    "id": "p025",
     "name": "【東泰】門把鎖組 金色／右開",
     "price": 920,
     "category": "五金",
     "img": "assets/img/頁面裝飾-色卡.jpg"
   },
   {
+    "id": "p026",
     "name": "【超固】五金配件 No.001",
     "price": 330,
     "category": "五金",
     "img": "assets/img/五金配件.jpg"
   },
   {
+    "id": "p027",
     "name": "【超固】五金配件 No.002",
     "price": 360,
     "category": "五金",
     "img": "assets/img/五金配件.jpg"
   },
   {
+    "id": "p028",
     "name": "【超固】五金配件 No.003",
     "price": 390,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
+    "id": "p029",
     "name": "【超固】五金配件 No.004",
     "price": 420,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
+    "id": "p030",
     "name": "【超固】五金配件 No.005",
     "price": 450,
     "category": "五金",
   "img": "assets/img/五金配件.jpg"
   },
   {
+    "id": "p031",
     "name": "【超固】五金配件 No.006",
     "price": 480,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
+     "id": "p032",
     "name": "【超固】五金配件 No.007",
     "price": 510,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
+     "id": "p033",
     "name": "【超固】五金配件 No.008",
     "price": 540,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
+     "id": "p034",
     "name": "【超固】五金配件 No.009",
     "price": 570,
     "category": "五金",
     "img": "assets/img/五金配件.jpg"
   },
   {
+     "id": "p035",
     "name": "【超固】五金配件 No.010",
     "price": 600,
     "category": "五金",
     "img": "assets/img/五金配件.jpg"
   },
   {
+     "id": "p036",
     "name": "【立邦】水泥漆 白色 5L",
     "price": 900,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+      "id": "p037",
     "name": "【虹牌】防水漆 深灰 1 加侖",
     "price": 1400,
     "category": "油漆",
     "img": "assets/img/7453FDD8-5CE4-4012-8FBF-65B18E2322CF.jpeg"
   },
   {
+     "id": "p038",
     "name": "【虹牌】木器漆 柚木色 4L",
     "price": 1600,
     "category": "油漆",
     "img": "assets/img/7453FDD8-5CE4-4012-8FBF-65B18E2322CF.jpeg"
   },
   {
+     "id": "p039",
     "name": "【大同】乳膠漆 米白色 5L",
     "price": 1100,
     "category": "油漆",
     "img": "assets/img/頁面裝飾-色卡.jpg"
   },
   {
+     "id": "p040",
     "name": "【立邦】乳膠漆 象牙白 5L",
     "price": 1000,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p041",
     "name": "【立邦】乳膠漆 米黃色 5L",
     "price": 1100,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p042",
     "name": "【立邦】乳膠漆 淺灰 5L",
     "price": 1200,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p043",
     "name": "【立邦】乳膠漆 天空藍 5L",
     "price": 1300,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p044",
     "name": "【立邦】乳膠漆 淺粉紅 5L",
     "price": 1400,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p045",
     "name": "【立邦】乳膠漆 綠薄荷 5L",
     "price": 1500,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p045",
     "name": "【立邦】乳膠漆 摩卡棕 5L",
     "price": 1600,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p046",
     "name": "【立邦】乳膠漆 淺紫 5L",
     "price": 1700,
     "category": "油漆",
     "img": "assets/img/9D4F48B9-FE6E-45EF-B705-DFB805C0EB9C.jpeg"
   },
   {
+     "id": "p047",
     "name": "【東工】手動鐵工剪 12吋",
     "price": 480,
     "category": "工具",
     "img": "assets/img/頁面裝飾-色卡.jpg"
   },
   {
+     "id": "p048",
     "name": "【BOSCH】震動電鑽 GSB550",
     "price": 2900,
     "category": "工具",
     "img": "assets/img/BOSCH震動電鑽.jpg"
   },
   {
+     "id": "p049",
     "name": "【得力】多功能榔頭 16oz",
     "price": 280,
     "category": "工具"
   },
   {
+     "id": "p050",
     "name": "【好工人】電動砂輪機 4吋",
     "price": 1600,
     "category": "工具"
   },
   {
+     "id": "p051",
     "name": "【工匠牌】專業工具 01",
     "price": 600,
     "category": "工具"
   },
   {
+     "id": "p052",
     "name": "【工匠牌】專業工具 02",
     "price": 700,
     "category": "工具"
   },
   {
+     "id": "p053",
     "name": "【工匠牌】專業工具 03",
     "price": 800,
     "category": "工具"
   },
   {
+     "id": "p054",
     "name": "【工匠牌】專業工具 04",
     "price": 900,
     "category": "工具"
   },
   {
+     "id": "p055",
     "name": "【工匠牌】專業工具 05",
     "price": 1000,
     "category": "工具"
   },
   {
+     "id": "p056",
     "name": "【工匠牌】專業工具 06",
     "price": 1100,
     "category": "工具"
   },
   {
+    "id": "p057",
     "name": "【工匠牌】專業工具 07",
     "price": 1200,
     "category": "工具"
   },
   {
+    "id": "p058",
     "name": "【工匠牌】專業工具 08",
     "price": 1300,
     "category": "工具"
   },
   {
+     "id": "p059",
     "name": "【工匠牌】專業工具 09",
     "price": 1400,
     "category": "工具"
   },
   {
+     "id": "p060",
     "name": "【工匠牌】專業工具 10",
     "price": 1500,
     "category": "工具"
   },
   {
+     "id": "p061",
     "name": "【日立】混凝土攪拌機 220V 500L",
     "price": 5000,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p062",
     "name": "【HILTI】雷射水平儀 綠光 360度",
     "price": 800,
     "category": "器材租借",
@@ -373,6 +435,7 @@
     "rental": true
   },
   {
+     "id": "p063",
     "name": "【山貓】小型挖土機 1噸",
     "price": 8000,
     "category": "器材租借",
@@ -380,12 +443,14 @@
     "rental": true
   },
   {
+     "id": "p064",
     "name": "【BOSCH】工業電動破碎機 60J",
     "price": 3000,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p065",
     "name": "【工程租借】機具設備編號 001",
     "price": 3300,
     "category": "器材租借",
@@ -395,6 +460,7 @@
     
   },
   {
+     "id": "p066",
     "name": "【工程租借】機具設備編號 002",
     "price": 3600,
     "category": "器材租借",
@@ -403,6 +469,7 @@
     "rental": true
   },
   {
+     "id": "p067",
     "name": "【工程租借】機具設備編號 003",
     "price": 3900,
     "category": "器材租借",
@@ -411,42 +478,49 @@
     "rental": true
   },
   {
+     "id": "p068",
     "name": "【工程租借】機具設備編號 004",
     "price": 4200,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p069",
     "name": "【工程租借】機具設備編號 005",
     "price": 4500,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p070",
     "name": "【工程租借】機具設備編號 006",
     "price": 4800,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p071",
     "name": "【工程租借】機具設備編號 007",
     "price": 5100,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p072",
     "name": "【工程租借】機具設備編號 008",
     "price": 5400,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p073",
     "name": "【工程租借】機具設備編號 009",
     "price": 5700,
     "category": "器材租借",
     "rental": true
   },
   {
+     "id": "p074",
     "name": "【工程租借】機具設備編號 010",
     "price": 6000,
     "category": "器材租借",
