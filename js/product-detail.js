@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-function addToCart(product) {
+window.addToCart = function(product) {
   const qtyInput = document.getElementById("qty");
   const rentalDaysInput = document.getElementById("rental-days");
 
