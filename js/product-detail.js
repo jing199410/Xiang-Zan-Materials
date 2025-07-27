@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
 
           <div class="detail-actions">
-            <input type="number" id="qty" min="1" value="1"/>
+            <input type="number" id="quantity" min="1" value="1"/>
             <button onclick="addToCart('${product.id}')">加入購物車</button>
           </div>
         </div>
@@ -100,7 +100,6 @@ function addToCart(id) {
 
   const cart = JSON.parse(localStorage.getItem("cart_B")) || [];
 
-  // 從 products.json 中取得當前商品資訊
   fetch("products.json")
     .then(res => res.json())
     .then(products => {
