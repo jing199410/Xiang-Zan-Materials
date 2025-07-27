@@ -370,9 +370,10 @@
   },
   {
      "id": "p053",
-    "name": "【工匠牌】專業工具 02",
-    "price": 700,
-    "category": "工具"
+    "name": "鋁梯 6尺(6階)",
+    "price": 3660,
+    "category": "工具",
+    "img": "assets/img/鋁梯-1.webp"
   },
   {
      "id": "p054",
