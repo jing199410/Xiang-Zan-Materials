@@ -202,31 +202,31 @@
   },
   {
     "id": "p029",
-    "name": "【超固】五金配件 No.004",
-    "price": 420,
+    "name": "合頁（3吋鉸鏈 不鏽鋼）2入",
+    "price": 220,
     "category": "五金",
-     "img": "assets/img/五金配件.jpg"
+     "img": "assets/img/合頁.jpeg"
   },
   {
     "id": "p030",
-    "name": "【超固】五金配件 No.005",
-    "price": 450,
+    "name": "鐵線一公斤（黑鐵線）",
+    "price": 2500,
     "category": "五金",
-  "img": "assets/img/五金配件.jpg"
+  "img": "assets/img/鐵線一公斤.jpg"
   },
   {
     "id": "p031",
-    "name": "【超固】五金配件 No.006",
-    "price": 480,
+    "name": "塑膠壁虎 M6（100入）",
+    "price": 200,
     "category": "五金",
      "img": "assets/img/五金配件.jpg"
   },
   {
      "id": "p032",
-    "name": "【超固】五金配件 No.007",
-    "price": 510,
+    "name": "抽屜滑軌（三節式）",
+    "price": 277,
     "category": "五金",
-     "img": "assets/img/五金配件.jpg"
+     "img": "assets/img/抽屜滑軌.jpg"
   },
   {
      "id": "p033",
@@ -238,14 +238,14 @@
   {
      "id": "p034",
     "name": "六角螺帽",
-    "price": 570,
+    "price": 100,
     "category": "五金",
     "img": "assets/img/六角螺帽.jpg"
   },
   {
      "id": "p035",
     "name": "自攻螺絲（尖尾／平尾）",
-    "price": 400,
+    "price": 100,
     "category": "五金",
     "img": "assets/img/自攻螺絲.jpg"
   },
