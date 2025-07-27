@@ -153,7 +153,7 @@
   },
   {
      "id": "p022",
-    "name": "【旭鋼】不鏽鋼螺絲 M6 x 40mm（100入）",
+    "name": "不鏽鋼螺絲 M6 x 40mm（100入）",
     "price": 160,
     "category": "五金",
     "img": "assets/img/不鏽鋼螺絲M6x40mm（100入）.jpg"
@@ -230,24 +230,24 @@
   },
   {
      "id": "p033",
-    "name": "【超固】五金配件 No.008",
+    "name": "平板鐵件（補強板）",
     "price": 540,
     "category": "五金",
-     "img": "assets/img/五金配件.jpg"
+     "img": "assets/img/平板鐵件.jpeg"
   },
   {
      "id": "p034",
-    "name": "【超固】五金配件 No.009",
+    "name": "六角螺帽",
     "price": 570,
     "category": "五金",
-    "img": "assets/img/五金配件.jpg"
+    "img": "assets/img/六角螺帽.jpg"
   },
   {
      "id": "p035",
-    "name": "【超固】五金配件 No.010",
-    "price": 600,
+    "name": "自攻螺絲（尖尾／平尾）",
+    "price": 400,
     "category": "五金",
-    "img": "assets/img/五金配件.jpg"
+    "img": "assets/img/自攻螺絲.jpg"
   },
   {
      "id": "p036",
