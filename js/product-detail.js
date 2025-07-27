@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch("./products.json");
+    //const res = await fetch("./products.json");
+    const res = await fetch("/Xiang-Zan-Materials/products.json");
+const text = await res.text();
+console.log(text);  // 先印出來看是不是 JSON 或是 HTML
+const products = JSON.parse(text);
+
     const products = await res.json();
     const product = products.find(p => p.id === productId);
 
