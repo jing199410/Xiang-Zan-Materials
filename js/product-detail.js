@@ -68,6 +68,7 @@ const imageGallery = images.map((img, idx) =>
           </div>
         </div>
       </div>
+           </div>
     ;
 
     // 啟動圖片燈箱
