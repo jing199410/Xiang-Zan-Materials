@@ -424,6 +424,7 @@
     "name": "混凝土攪拌機 220V 500L",
     "price": 9000,
     "category": "器材租借",
+    "img": "assets/img//混凝土攪拌機220V.avif",
     "rental": true
   },
   {
