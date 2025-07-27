@@ -10,36 +10,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const res = await fetch('./products.json');
-   
-const text = await res.text();
-console.log(text);  // 先印出來看是不是 JSON 或是 HTML
-const products = JSON.parse(text);
-
-    const products = await res.json();
+    const text = await res.text();
+    console.log(text);  // 檢查拿到的資料是不是 JSON
+    
+    const products = JSON.parse(text);
     const product = products.find(p => p.id === productId);
 
     if (!product) {
       container.innerHTML = "<p>找不到該商品。</p>";
       return;
     }
+
     let images = [];
+    if (Array.isArray(product.img)) {
+      images = product.img;
+    } else if (typeof product.img === "string" && product.img.trim() !== "") {
+      images = [product.img];
+    } else {
+      images = ["assets/img/placeholder.jpg"]; // 預設圖片
+    }
 
-if (Array.isArray(product.img)) {
-  images = product.img;
-} else if (typeof product.img === "string" && product.img.trim() !== "") {
-  images = [product.img];
-} else {
-  images = ["assets/img/placeholder.jpg"]; // 提供一張預設圖片
-}
+    const imageGallery = images.map((img, idx) =>
+      `<a href="${img}" class="glightbox" data-gallery="product">
+        <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
+      </a>`
+    ).join("");
 
-const imageGallery = images.map((img, idx) =>
-  `<a href="${img}" class="glightbox" data-gallery="product">
-    <img src="${img}" alt="${product.id} ${idx + 1}" class="detail-img" />
-  </a>`
-).join("");
-
-
-    container.innerHTML = 
+    container.innerHTML = `
       <div class="detail-box">
         <div class="detail-gallery">
           ${imageGallery}
@@ -68,8 +65,7 @@ const imageGallery = images.map((img, idx) =>
           </div>
         </div>
       </div>
-           </div>
-    ;
+    `;
 
     // 啟動圖片燈箱
     if (typeof GLightbox === "function") {
@@ -87,7 +83,7 @@ const imageGallery = images.map((img, idx) =>
 
       const updateTotal = () => {
         const days = parseInt(daysInput.value, 10) || 1;
-        totalDisplay.textContent = 總計：NT$${(pricePerDay * days).toLocaleString()};
+        totalDisplay.textContent = `總計：NT$${(pricePerDay * days).toLocaleString()}`;
       };
       daysInput.addEventListener("input", updateTotal);
       updateTotal();
@@ -97,7 +93,7 @@ const imageGallery = images.map((img, idx) =>
     if (product.specs) {
       const table = document.getElementById("spec-table");
       table.innerHTML = Object.entries(product.specs)
-        .map(([key, val]) => <tr><th>${key}</th><td>${val}</td></tr>)
+        .map(([key, val]) => `<tr><th>${key}</th><td>${val}</td></tr>`)
         .join("");
     }
 
