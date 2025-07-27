@@ -18,7 +18,7 @@
     "name": "【永大】卡扣地板 白橡木紋 5mm × 1220mm（每坪）",
     "price": 2600,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg",
+    "img": "assets/img/仿木紋2.jpg",
     "description": "高品質白橡木紋 5mm × 1220mm×寬度自訂，適合商業及家庭使用。耐磨防水，安裝簡便。"
   },
   {
@@ -32,43 +32,43 @@
     "name": "【永大】卡扣地板 石紋灰 5mm × 1220mm（每坪）",
     "price": 3200,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【永大】卡扣地板 原橡木 5mm × 1220mm（每坪）",
     "price": 3500,
     "category": "建材"
-    ,"img": "assets/img/頁面裝飾-色卡.jpg"
+    ,"img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【永大】卡扣地板 淺胡桃木 5mm × 1220mm（每坪）",
     "price": 3800,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【永大】卡扣地板 仿竹紋 5mm × 1220mm（每坪）",
     "price": 4100,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【永大】卡扣地板 自然木紋 5mm × 1220mm（每坪）",
     "price": 4400,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【永大】卡扣地板 咖啡橡木 5mm × 1220mm（每坪）",
     "price": 4700,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【久鼎】仿木地貼 胡桃木紋 2mm（每卷15M）",
     "price": 1500,
     "category": "建材",
-    "img": "assets/img/頁面裝飾-色卡.jpg"
+    "img": "assets/img/仿木紋2.jpg"
   },
   {
     "name": "【久鼎】仿木地貼 白橡木紋 2mm（每卷15M）",
@@ -369,12 +369,14 @@
     "name": "【HILTI】雷射水平儀 綠光 360度",
     "price": 800,
     "category": "器材租借",
+      "img": "assets/img/TP00005730002966_O.webp",
     "rental": true
   },
   {
     "name": "【山貓】小型挖土機 1噸",
     "price": 8000,
     "category": "器材租借",
+      "img": "assets/img/山貓.bmp",
     "rental": true
   },
   {
