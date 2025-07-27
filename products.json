@@ -503,4 +503,111 @@
     "price": 2900,
     "category": "工具"
   }
+  {
+     "id": "p076",
+    "name": "【日立】混凝土攪拌機 220V 500L",
+    "price": 5000,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p077",
+    "name": "【HILTI】雷射水平儀 綠光 360度",
+    "price": 800,
+    "category": "器材租借",
+      "img": "assets/img/TP00005730002966_O.webp",
+    "rental": true
+  },
+  {
+     "id": "p078",
+    "name": "【山貓】小型挖土機 1噸",
+    "price": 8000,
+    "category": "器材租借",
+      "img": "assets/img/山貓.bmp",
+    "rental": true
+  },
+  {
+     "id": "p079",
+    "name": "【BOSCH】工業電動破碎機 60J",
+    "price": 3000,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p080",
+    "name": "【工程租借】機具設備編號 001",
+    "price": 3300,
+    "category": "器材租借",
+     "img": "assets/img/鷹架組1.jpg",
+     "description": "鷹架，高品質，適合商業及家庭使用。",
+      "rental": true
+    
+  },
+  {
+     "id": "p081",
+    "name": "【工程租借】機具設備編號 002",
+    "price": 3600,
+    "category": "器材租借",
+    "img": "assets/img/鷹架組2.jpg",
+     "description": "鷹架，高品質，適合商業及家庭使用。",
+    "rental": true
+  },
+  {
+     "id": "p082",
+    "name": "【工程租借】機具設備編號 003",
+    "price": 3900,
+    "category": "器材租借",
+     "img": "assets/img/鋁梯.jpg",
+     "description": "鋁梯，高品質，適合商業及家庭使用。",
+    "rental": true
+  },
+  {
+     "id": "p083",
+    "name": "【工程租借】機具設備編號 004",
+    "price": 4200,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p084",
+    "name": "【工程租借】機具設備編號 005",
+    "price": 4500,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p085",
+    "name": "【工程租借】機具設備編號 006",
+    "price": 4800,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p086",
+    "name": "【工程租借】機具設備編號 007",
+    "price": 5100,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p087",
+    "name": "【工程租借】機具設備編號 008",
+    "price": 5400,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p088",
+    "name": "【工程租借】機具設備編號 009",
+    "price": 5700,
+    "category": "器材租借",
+    "rental": true
+  },
+  {
+     "id": "p089",
+    "name": "【工程租借】機具設備編號 010",
+    "price": 6000,
+    "category": "器材租借",
+    "rental": true
+  }
 ]
